@@ -7,3 +7,6 @@ c:\users\ergo\documents\visual studio 2012\Projects\GameOfLife\obj\Debug\GameOfL
 c:\users\ergo\documents\visual studio 2012\Projects\GameOfLife\obj\Debug\GameOfLife.csproj.GenerateResource.Cache
 c:\users\ergo\documents\visual studio 2012\Projects\GameOfLife\obj\Debug\GameOfLife.exe
 c:\users\ergo\documents\visual studio 2012\Projects\GameOfLife\obj\Debug\GameOfLife.pdb
+C:\Users\Mobile\Documents\GitHub\GameOfLife\bin\Debug\GameOfLife.exe.config
+C:\Users\Mobile\Documents\GitHub\GameOfLife\obj\Debug\GameOfLife.exe
+C:\Users\Mobile\Documents\GitHub\GameOfLife\obj\Debug\GameOfLife.pdb
