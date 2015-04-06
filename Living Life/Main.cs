@@ -374,6 +374,7 @@ namespace Living_Life
             //    textBox1.Text += " " + rareEvents[j].description + " " + rareEvents[j].cost + " \n";
             //}
 
+            player = new Player();
         }
 
     }
