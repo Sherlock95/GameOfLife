@@ -1,0 +1,38 @@
+Caught Speeding
+-195
+Birthday Gift
+-20
+Amazon
+-50
+New Clothes/Shoes
+-100
+Medical-Doctor-Flu Shot
+-40
+Medical-Doctor-Physical
+-125
+Medical-Doctor-Urgent Care Visit
+-100
+Medical-Dentist-6MonthCleaning
+-125
+Medical-Dentist-Cavity
+-170
+Oil Change
+-35
+Flat Tire
+-75
+Locked Keys in Car
+-75
+Shattered Phone
+-60
+Shattered Laptop
+-200
+Stolen Phone
+-500
+Stolen Wallet
+-100
+Stolen Laptop
+-750
+Lottery
+-5
+Overdraft
+-30

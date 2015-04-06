@@ -1,0 +1,21 @@
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\bin\Debug\Living Life.exe
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\bin\Debug\Living Life.pdb
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\obj\Debug\Living_Life.Properties.Resources.resources
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\obj\Debug\Living Life.csproj.GenerateResource.Cache
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\obj\Debug\Living Life.exe
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\obj\Debug\Living Life.pdb
+C:\Users\Owner\AppData\Local\Temporary Projects\Living Life\obj\Debug\Living_Life.MainScreen.resources
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living Life.exe
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living Life.pdb
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\bin\Debug\Living Life.exe
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\bin\Debug\Living Life.pdb
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living_Life.EndMonth.resources
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living_Life.MainScreen.resources
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living_Life.Properties.Resources.resources
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living Life.csproj.GenerateResource.Cache
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living_Life.OptionsMenu.resources
+C:\Users\Owner\Documents\Visual Studio 2008\Projects\C#\Living Life\Living Life\obj\Debug\Living_Life.LoadScreen.resources
+C:\Users\Ergo\Documents\Visual Studio 2012\Projects\Living Life\Living Life\obj\Debug\Living Life.exe
+C:\Users\Ergo\Documents\Visual Studio 2012\Projects\Living Life\Living Life\obj\Debug\Living Life.pdb

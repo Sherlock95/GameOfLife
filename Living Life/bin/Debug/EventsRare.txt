@@ -1,0 +1,58 @@
+Raise
+1500
+Inheritance
+10000
+Lottery
+5
+Fired
+-1500
+Car Accident-Your Fault
+-10000
+Car Accident-Their Fault
+-5000
+Late Payment
+-30
+Disaster-Flood
+-10000
+Disaster-Fire
+-10000
+Disaster-Tornado
+-10000
+Disaster-Earthquake
+-10000
+Disaster-Hail
+-3000
+New Tires
+-200
+House Repair-Appliance
+-1200
+House Repair-Exterior-New Roof
+-10000
+House Repair-Exterior-Siding
+-10000
+House Repair-AC
+-150
+House Repair-Plumbing
+-250
+House Repair-Exterminator
+-125
+House Repair-Sprinklers
+-2500
+House Broken Into
+-10000
+Medical-Doctor-Emergency Room
+-1500
+Medical-Doctor-Broken Limb
+-2500
+Medical-Doctor-Electrocution
+-5000
+Medical-Doctor-Caught on Fire
+-15000
+Medical-Doctor-Bitten by a Giraffe
+0
+Medical-Dentist-Root Canal
+-1000
+Medical-Dentist-Abscess
+-225
+Medical-Dentist-Broken/Chipped Tooth
+-300
