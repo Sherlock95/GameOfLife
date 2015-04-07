@@ -77,6 +77,7 @@
             this.btnGetJob.TabIndex = 3;
             this.btnGetJob.Text = "Get a new job";
             this.btnGetJob.UseVisualStyleBackColor = true;
+            this.btnGetJob.Click += new System.EventHandler(this.btnGetJob_Click);
             // 
             // btnGoToCollege
             // 

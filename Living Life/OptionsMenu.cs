@@ -15,5 +15,13 @@ namespace Living_Life
         {
             InitializeComponent();
         }
+
+        private void btnGetJob_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            rand.Next(0,21);
+            Main.job tmp = new Main.job();
+            
+        }
     }
 }
