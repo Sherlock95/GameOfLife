@@ -14,6 +14,7 @@ namespace Living_Life
     {
 
         MainScreen mainScreen;
+        private bool gameCalled = false;
 
         public LoadScreen()
         {
@@ -24,6 +25,7 @@ namespace Living_Life
         {
             InitializeComponent();
             mainScreen = mainScreen0;
+            this.TopMost = true;
         }
 
         private void LoadScreen_Load(object sender, EventArgs e)
@@ -47,6 +49,8 @@ namespace Living_Life
                 Console.WriteLine("There was a problem reading the master saves file:");
                 Console.WriteLine(exception.Message);
             }
+
+            //gameCalled = true;
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -55,14 +59,12 @@ namespace Living_Life
             //save new name
             try
             {
-                using (StreamWriter sw = new StreamWriter("SaveFiles.txt"))
+                using (StreamWriter sw = new StreamWriter("SaveFiles.txt", append:true))
                 {
 
                     if (txtNewName.Text != "")
                     {
-
-                         sw.WriteLine(txtNewName.Text);
-
+                        sw.WriteLine(txtNewName.Text);
                     }
                    
 
@@ -101,6 +103,7 @@ namespace Living_Life
 
             mainScreen.Enabled = true;
             mainScreen.mainGame.player = new Player(18, 0, 0, 0, 0, 0, 0, null, null);
+            gameCalled = true;
             this.Close();
 
         }
@@ -118,7 +121,25 @@ namespace Living_Life
             }
         }
 
-       
+        //Overrided the closing method so clicking the "x" on the load screen closes the entire game.
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+            if (gameCalled) return;
+
+            switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default:
+                    mainScreen.Close();
+                    break;
+            }        
+        }
 
 
         //private void LoadScreen_Leave(object sender, EventArgs e)
