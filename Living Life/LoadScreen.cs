@@ -15,6 +15,7 @@ namespace Living_Life
 
         MainScreen mainScreen;
         private bool gameCalled = false;
+        public bool alsikuhfloasdiuhgvaloisufghal;
 
         public LoadScreen()
         {
@@ -126,7 +127,11 @@ namespace Living_Life
         {
             base.OnFormClosing(e);
 
-            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            if (e.CloseReason == CloseReason.WindowsShutDown)
+            {
+                mainScreen.Close();
+                return;
+            }
 
             if (gameCalled) return;
 
