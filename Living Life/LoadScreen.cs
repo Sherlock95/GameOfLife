@@ -62,13 +62,10 @@ namespace Living_Life
             {
                 using (StreamWriter sw = new StreamWriter("SaveFiles.txt", append:true))
                 {
-
                     if (txtNewName.Text != "")
                     {
                         sw.WriteLine(txtNewName.Text);
                     }
-                   
-
                 }
             }
             catch (Exception exception)
@@ -84,6 +81,7 @@ namespace Living_Life
                 {
 
                     sw.Write(""); //clear a possibly existing file
+                    sw.WriteLine(txtNewName.Text); //Name
                     sw.WriteLine("18"); //age
                     sw.WriteLine("0"); //wife
                     sw.WriteLine("0"); //children
@@ -151,7 +149,7 @@ namespace Living_Life
         {
             string loadFile = lstFiles.SelectedItem.ToString() + ".txt";
 
-            //File info order: AGE, WIFE, CHILDREN, INCOME, SAVINGS, EDUCATION LEVEL, SCHOOL MONTHS, CAR, HOUSE
+            //File info order: NAME, AGE, WIFE, CHILDREN, INCOME, SAVINGS, EDUCATION LEVEL, SCHOOL MONTHS, CAR, HOUSE
             try
             {
                 using (StreamReader sr = new StreamReader(loadFile))

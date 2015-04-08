@@ -50,6 +50,10 @@ namespace Living_Life
             LoadScreen loadGame = new LoadScreen(this);
             loadGame.Show();
 
+            if (loadGame.IsDisposed)
+            {
+                lblName.Text = mainGame.player.name;
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Living_Life
 {
     public class Player
     {
-
+        public string name;
         public int age = 18;
         public int wife = 0;
         public int children = 0;
