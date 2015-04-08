@@ -34,6 +34,7 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.lblPrompt2 = new System.Windows.Forms.Label();
             this.txtNewName = new System.Windows.Forms.TextBox();
+            this.errLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstFiles
@@ -93,11 +94,24 @@
             this.txtNewName.TabIndex = 5;
             this.txtNewName.TextChanged += new System.EventHandler(this.txtNewName_TextChanged);
             // 
+            // errLabel
+            // 
+            this.errLabel.AutoSize = true;
+            this.errLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errLabel.ForeColor = System.Drawing.Color.Red;
+            this.errLabel.Location = new System.Drawing.Point(138, 230);
+            this.errLabel.Name = "errLabel";
+            this.errLabel.Size = new System.Drawing.Size(141, 13);
+            this.errLabel.TabIndex = 6;
+            this.errLabel.Text = "You must enter a name!";
+            this.errLabel.Visible = false;
+            // 
             // LoadScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 285);
+            this.Controls.Add(this.errLabel);
             this.Controls.Add(this.txtNewName);
             this.Controls.Add(this.lblPrompt2);
             this.Controls.Add(this.btnNew);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label lblPrompt2;
         private System.Windows.Forms.TextBox txtNewName;
+        private System.Windows.Forms.Label errLabel;
     }
 }

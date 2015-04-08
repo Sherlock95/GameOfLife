@@ -13,7 +13,7 @@ namespace Living_Life
     public partial class MainScreen : Form
     {
 
-        public Main mainGame = new Main();
+        public Main mainGame;
 
         public MainScreen()
         {
@@ -48,12 +48,8 @@ namespace Living_Life
 
             this.Enabled = false;
             LoadScreen loadGame = new LoadScreen(this);
+            mainGame = new Main();
             loadGame.Show();
-
-            if (loadGame.IsDisposed)
-            {
-                lblName.Text = mainGame.player.name;
-            }
         }
     }
 }

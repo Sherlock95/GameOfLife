@@ -34,21 +34,16 @@ namespace Living_Life
 
         public Main()
         {
-
             setUpMain();
-
         }
 
         public int calculateValue(Property property)
         {
-
             return (property.downPayment + (property.monthlyPayment * property.duration));
-
         }
 
         void setUpMain()
         {
-
             commonEvents = new randomEvent[0];
             rareEvents = new randomEvent[0];
 
@@ -374,8 +369,7 @@ namespace Living_Life
             //    textBox1.Text += " " + rareEvents[j].description + " " + rareEvents[j].cost + " \n";
             //}
 
-            player = new Player();
+            
         }
-
     }
 }

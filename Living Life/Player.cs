@@ -18,9 +18,9 @@ namespace Living_Life
         public Property car = null;
         public Property house = null;
 
-        public Player() //make new player
+        public Player()
         {
-
+            name = "John";
             age = 18;
             wife = 0;
             children = 0;
@@ -30,12 +30,25 @@ namespace Living_Life
             schoolMonths = 0;
             car = null;
             house = null;
-
         }
 
-        public Player(int Age, int Wife, int Children, int Income, int Savings, int EducationLevel, int SchoolMonths, Property Car, Property House) //remake existing player
+        public Player(string name) //make new player
         {
+            this.name = name;
+            age = 18;
+            wife = 0;
+            children = 0;
+            income = 0;
+            savings = 0;
+            educationLevel = 0;
+            schoolMonths = 0;
+            car = null;
+            house = null;
+        }
 
+        public Player(string Name, int Age, int Wife, int Children, int Income, int Savings, int EducationLevel, int SchoolMonths, Property Car, Property House) //remake existing player
+        {
+            name = Name;
             age = Age;
             wife = Wife;
             children = Children;
@@ -45,7 +58,6 @@ namespace Living_Life
             schoolMonths = SchoolMonths;
             car = Car;
             house = House;
-
         }
 
     }

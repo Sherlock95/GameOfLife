@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace Living_Life
 {
@@ -15,6 +16,7 @@ namespace Living_Life
 
         MainScreen mainScreen;
         private bool gameCalled = false;
+        public Player player;
 
         public LoadScreen()
         {
@@ -49,60 +51,90 @@ namespace Living_Life
                 Console.WriteLine("There was a problem reading the master saves file:");
                 Console.WriteLine(exception.Message);
             }
-
-            //gameCalled = true;
         }
 
         // NOTE: WE MAY WANT TO LOOK INTO SAVING AND LOADING THE OBJECTS USING XML FILES. IT SEEMS TO BE AN EASIER METHOD THAN USING TEXT.
         private void btnNew_Click(object sender, EventArgs e)
         {
+            bool playerExists = false;
+
+            if (txtNewName.Text != "")
+                player = new Player(txtNewName.Text);
+            else
+                errLabel.Visible = true;
+
+            if (errLabel.Visible)
+                errLabel.Visible = false;
 
             //save new name
-            try
+            for (int i = 0; i < lstFiles.Items.Count; i++)
             {
-                using (StreamWriter sw = new StreamWriter("SaveFiles.txt", append:true))
+                if (player.name == lstFiles.Items[i].ToString()) 
                 {
-                    if (txtNewName.Text != "")
-                    {
-                        sw.WriteLine(txtNewName.Text);
-                    }
+                    playerExists = true;
                 }
             }
-            catch (Exception exception)
+
+            if (!playerExists)
             {
-                Console.WriteLine("There was a problem writing to the master saves file:");
-                Console.WriteLine(exception.Message);
+                try
+                {
+                    using (StreamWriter sw = new StreamWriter("SaveFiles.txt", append: true))
+                    {
+                        sw.WriteLine(player.name);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("There was a problem writing to the master saves file:");
+                    Console.WriteLine(exception.Message);
+                }
+            }
+
+            XmlSerializer writer = new XmlSerializer(typeof(Player));
+
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(player.name + ".xml"))
+                {
+                    writer.Serialize(sw, player);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("There was a problem creating the player save file.");
+                Console.WriteLine(ex.Message);
             }
 
             //save new file
-            try
-            {
-                using (StreamWriter sw = new StreamWriter(txtNewName.Text + ".txt"))
-                {
+            //try
+            //{
+            //    using (StreamWriter sw = new StreamWriter(txtNewName.Text + ".txt"))
+            //    {
 
-                    sw.Write(""); //clear a possibly existing file
-                    sw.WriteLine(txtNewName.Text); //Name
-                    sw.WriteLine("18"); //age
-                    sw.WriteLine("0"); //wife
-                    sw.WriteLine("0"); //children
-                    sw.WriteLine("0"); //income
-                    sw.WriteLine("0"); //savings
-                    sw.WriteLine("0"); //education level
-                    sw.WriteLine("0"); //school months
-                    sw.WriteLine("none"); //car
-                    sw.WriteLine("none"); //house
+            //        sw.Write(""); //clear a possibly existing file
+            //        sw.WriteLine(txtNewName.Text); //Name
+            //        sw.WriteLine("18"); //age
+            //        sw.WriteLine("0"); //wife
+            //        sw.WriteLine("0"); //children
+            //        sw.WriteLine("0"); //income
+            //        sw.WriteLine("0"); //savings
+            //        sw.WriteLine("0"); //education level
+            //        sw.WriteLine("0"); //school months
+            //        sw.WriteLine("none"); //car
+            //        sw.WriteLine("none"); //house
 
-                }
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine("There was a problem writing to the save file:");
-                Console.WriteLine(exception.Message);
-            }
+            //    }
+            //}
+            //catch (Exception exception)
+            //{
+            //    Console.WriteLine("There was a problem writing to the save file:");
+            //    Console.WriteLine(exception.Message);
+            //}
 
-            mainScreen.Enabled = true;
-            mainScreen.mainGame.player = new Player(18, 0, 0, 0, 0, 0, 0, null, null);
             gameCalled = true;
+            mainScreen.Enabled = true;
+            mainScreen.mainGame.player = player;
             this.Close();
 
         }
