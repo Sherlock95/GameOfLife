@@ -51,5 +51,13 @@ namespace Living_Life
             mainGame = new Main();
             loadGame.Show();
         }
+
+        //This is called from the load menu when it closes to let the main screen know that it should set fields.
+        public void InitFields()
+        {
+            lblName.Text = mainGame.player.name;
+            lblAge.Text = mainGame.player.age.ToString();
+            
+        }
     }
 }

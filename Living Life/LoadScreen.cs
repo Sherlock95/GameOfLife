@@ -135,6 +135,7 @@ namespace Living_Life
             gameCalled = true;
             mainScreen.Enabled = true;
             mainScreen.mainGame.player = player;
+            mainScreen.InitFields();
             this.Close();
 
         }
@@ -187,6 +188,8 @@ namespace Living_Life
                 using (StreamReader sr = new StreamReader(loadFile))
                 {
                     //Load character status here
+                    XmlSerializer reader = new XmlSerializer(typeof(Player));
+                    player = (Player)reader.Deserialize(sr);
                 }
             }
             catch (Exception exception)
@@ -194,6 +197,12 @@ namespace Living_Life
                 Console.WriteLine("There was a problem reading the master saves file:");
                 Console.WriteLine(exception.Message);
             }
+
+            mainScreen.mainGame.player = player;
+            gameCalled = true;
+            mainScreen.Enabled = true;
+            mainScreen.InitFields();
+            this.Close();
         }
     }
 }
