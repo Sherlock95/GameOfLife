@@ -15,7 +15,6 @@ namespace Living_Life
 
         MainScreen mainScreen;
         private bool gameCalled = false;
-        public bool alsikuhfloasdiuhgvaloisufghal;
 
         public LoadScreen()
         {
