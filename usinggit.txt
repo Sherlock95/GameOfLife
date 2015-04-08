@@ -1,0 +1,32 @@
+Steps to pushing changes using git. Safest route is to use shell. Other route which is unfamiliar to me is GUI. I will cover shell route.
+
+Step 1: check status.
+	- 'git status' checks the status of your local repo on your machine vs the status of the remote repo.
+
+	Changes you have made are shown as either staged, unstaged, commited, or other.
+
+Step 2: Stage changes.
+	- 'git stage <changed file name>' allows you to stage changes you have made, if you have made changes that you don't want to 
+		push and instead wish to ignore, use 'git checkout <changed file name>' to ignore the change.
+
+	- 'git statge -A' stages all changes you have made. It is a quick way of moving along.
+
+Step 3: Commit changes.
+	- This is your actual intent to push your changes. 'git commit' takes the changes you have staged and bundles them into a nice
+		commit with a message. You have to add a comment using the notepad that pops up. 
+
+	- If you don't want to make the commit yet, just exit notepad with no changes and it will prevent you from commiting due to an 
+		empty comment. After you have made your comment, just save and exit notepad and the commit will be ready.
+
+Step 4: PULL
+	- ALWAYS PULL BEFORE YOU PUSH! This allows you to keep from overwriting other's changes and instead check your edits vs other's
+		edits. Git does have a way of automatically showing you when there are collisions between versions when pulling. You use
+		'git pull' to pull from the remote repo.
+
+	- After you have checked the collisions and edited the files to be correct, make sure you re commit the changes.
+
+Step 5: PUSH
+	- 'git push' will push your changes to the remote repo. This is the last step and after this is completed, your changes will 
+		be visible on the remote repo.
+
+NOTE: THERE CAN BE MORE STEPS THAN THIS, BUT THIS IS THE GENERAL GIST OF HOW TO USE GIT SHELL.
