@@ -53,6 +53,7 @@ namespace Living_Life
             //gameCalled = true;
         }
 
+        // NOTE: WE MAY WANT TO LOOK INTO SAVING AND LOADING THE OBJECTS USING XML FILES. IT SEEMS TO BE AN EASIER METHOD THAN USING TEXT.
         private void btnNew_Click(object sender, EventArgs e)
         {
 
@@ -145,15 +146,24 @@ namespace Living_Life
             }        
         }
 
+        // NOTE: WE MAY WANT TO LOOK INTO SAVING AND LOADING THE OBJECTS USING XML FILES. IT SEEMS TO BE AN EASIER METHOD THAN USING TEXT.
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            string loadFile = lstFiles.SelectedItem.ToString() + ".txt";
 
-        //private void LoadScreen_Leave(object sender, EventArgs e)
-        //{
-        //    mainScreen.Enabled = true;
-        //}
-
-        //private void LoadScreen_Deactivate(object sender, EventArgs e)
-        //{
-        //    mainScreen.Enabled = true;
-        //}
+            //File info order: AGE, WIFE, CHILDREN, INCOME, SAVINGS, EDUCATION LEVEL, SCHOOL MONTHS, CAR, HOUSE
+            try
+            {
+                using (StreamReader sr = new StreamReader(loadFile))
+                {
+                    //Load character status here
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("There was a problem reading the master saves file:");
+                Console.WriteLine(exception.Message);
+            }
+        }
     }
 }
