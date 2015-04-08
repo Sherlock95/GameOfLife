@@ -15,13 +15,6 @@ namespace Living_Life
             public double cost;
         };
 
-        public struct job
-        {
-            public String name;
-            public int level;
-            public int salary;
-        };
-
         public Player player;
 
         public randomEvent[] commonEvents = new randomEvent[0];
@@ -30,7 +23,7 @@ namespace Living_Life
         public Property[] houses = new Property[10];
         public Property[] cars = new Property[10];
 
-        public job[] jobs = new job[21];
+        public Job[] jobs = new Job[21];
 
         public Main()
         {
@@ -50,7 +43,7 @@ namespace Living_Life
             houses = new Property[10];
             cars = new Property[10];
 
-            jobs = new job[21];
+            jobs = new Job[21];
 
             //house information
 

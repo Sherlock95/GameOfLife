@@ -59,6 +59,7 @@
     <Compile Include="EndMonth.Designer.cs">
       <DependentUpon>EndMonth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Job.cs" />
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>

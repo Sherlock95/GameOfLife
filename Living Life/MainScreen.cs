@@ -55,13 +55,20 @@ namespace Living_Life
         //This is called from the load menu when it closes to let the main screen know that it should set fields.
         public void InitFields()
         {
-            lblName.Text = mainGame.player.name;
-            lblAge.Text = mainGame.player.age.ToString();
-            
+            lblName.Text = lblName.Text + " " + mainGame.player.name;
+            lblAge.Text = lblAge.Text + " " + mainGame.player.age.ToString();
+            lblSavings.Text = lblSavings.Text + " " + mainGame.player.savings.ToString();
+            lblJob.Text = lblJob.Text + " " + mainGame.player.job.name;
+
             if (mainGame.player.car != null)
             {
                 lblCar.Text = mainGame.player.car.name;
                 // What is the difference between car bills and monthly car bills????
+            }
+            else
+            {
+                lblCar.Text = "None";
+                lblCarBills.Text = "None";
             }
         }
     }

@@ -20,7 +20,7 @@ namespace Living_Life
         {
             Random rand = new Random();
             rand.Next(0,21);
-            Main.job tmp = new Main.job();
+            Job tmp = new Job();
             
         }
     }

@@ -180,7 +180,7 @@ namespace Living_Life
         // NOTE: WE MAY WANT TO LOOK INTO SAVING AND LOADING THE OBJECTS USING XML FILES. IT SEEMS TO BE AN EASIER METHOD THAN USING TEXT.
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            string loadFile = lstFiles.SelectedItem.ToString() + ".txt";
+            string loadFile = lstFiles.SelectedItem.ToString() + ".xml";
 
             //File info order: NAME, AGE, WIFE, CHILDREN, INCOME, SAVINGS, EDUCATION LEVEL, SCHOOL MONTHS, CAR, HOUSE
             try
@@ -198,7 +198,7 @@ namespace Living_Life
                 Console.WriteLine(exception.Message);
             }
 
-            mainScreen.mainGame.player = player;
+            mainScreen.mainGame.player = this.player;
             gameCalled = true;
             mainScreen.Enabled = true;
             mainScreen.InitFields();
