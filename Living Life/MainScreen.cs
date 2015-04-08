@@ -58,6 +58,11 @@ namespace Living_Life
             lblName.Text = mainGame.player.name;
             lblAge.Text = mainGame.player.age.ToString();
             
+            if (mainGame.player.car != null)
+            {
+                lblCar.Text = mainGame.player.car.name;
+                // What is the difference between car bills and monthly car bills????
+            }
         }
     }
 }
