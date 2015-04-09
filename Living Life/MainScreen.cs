@@ -124,5 +124,12 @@ namespace Living_Life
                     break;
             }
         }
+
+        private void btnOptions_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            OptionsMenu options = new OptionsMenu(this);
+            options.Show();
+        }
     }
 }
