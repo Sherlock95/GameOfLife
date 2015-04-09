@@ -1,6 +1,6 @@
 ﻿namespace Living_Life
 {
-    partial class BuyHouse
+    partial class BuyCar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstHouses = new System.Windows.Forms.ListBox();
+            this.lstCars = new System.Windows.Forms.ListBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lstHouses
+            // lstCars
             // 
-            this.lstHouses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lstHouses.FormattingEnabled = true;
-            this.lstHouses.ItemHeight = 20;
-            this.lstHouses.Location = new System.Drawing.Point(12, 12);
-            this.lstHouses.Name = "lstHouses";
-            this.lstHouses.Size = new System.Drawing.Size(826, 564);
-            this.lstHouses.TabIndex = 0;
+            this.lstCars.FormattingEnabled = true;
+            this.lstCars.Location = new System.Drawing.Point(13, 13);
+            this.lstCars.Name = "lstCars";
+            this.lstCars.Size = new System.Drawing.Size(742, 524);
+            this.lstCars.TabIndex = 0;
             // 
             // btnConfirm
             // 
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnConfirm.Location = new System.Drawing.Point(12, 630);
+            this.btnConfirm.Location = new System.Drawing.Point(13, 570);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(187, 43);
+            this.btnConfirm.Size = new System.Drawing.Size(172, 48);
             this.btnConfirm.TabIndex = 1;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -58,9 +56,9 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCancel.Location = new System.Drawing.Point(651, 630);
+            this.btnCancel.Location = new System.Drawing.Point(583, 570);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(187, 43);
+            this.btnCancel.Size = new System.Drawing.Size(172, 48);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -70,23 +68,23 @@
             // 
             this.lblWarning.AutoSize = true;
             this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblWarning.Location = new System.Drawing.Point(240, 640);
+            this.lblWarning.Location = new System.Drawing.Point(209, 583);
             this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(373, 20);
+            this.lblWarning.Size = new System.Drawing.Size(351, 20);
             this.lblWarning.TabIndex = 3;
-            this.lblWarning.Text = "Remember: You can only have one house at a time!";
+            this.lblWarning.Text = "Remember: You can only have one car at a time!";
             // 
-            // BuyHouse
+            // BuyCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 704);
+            this.ClientSize = new System.Drawing.Size(767, 654);
             this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.lstHouses);
-            this.Name = "BuyHouse";
-            this.Text = "Buy House";
+            this.Controls.Add(this.lstCars);
+            this.Name = "BuyCar";
+            this.Text = "Buy Car";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,10 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstHouses;
+        private System.Windows.Forms.ListBox lstCars;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblWarning;
-
     }
 }

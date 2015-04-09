@@ -13,12 +13,14 @@ namespace Living_Life
     {
         public OptionsMenu parentOptions;
 
-        private bool cancelBtnPressed = false;
-        private bool confirmBtnPressed = false;
+        private bool cancelBtnPressed;
+        private bool confirmBtnPressed;
 
         public BuyHouse(OptionsMenu parentOptions)
         {
             InitializeComponent();
+            confirmBtnPressed = false;
+            cancelBtnPressed = false;
             this.parentOptions = parentOptions;
             GetHouses();
             this.TopMost = true;

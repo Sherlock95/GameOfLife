@@ -35,5 +35,29 @@ namespace Living_Life
             (new BuyHouse(this)).Show();
             this.Enabled = false;
         }
+
+        private void btnBuyCar_Click(object sender, EventArgs e)
+        {
+            (new BuyCar(this)).Show();
+            this.Enabled = false;
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown)
+            {
+                mainScreen.Close();
+                return;
+            }
+        }
+
+        // Need a way of telling if an option was chosen.
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            mainScreen.Enabled = true;
+            this.Close();
+        }
     }
 }

@@ -68,6 +68,7 @@
             this.btnBuyCar.TabIndex = 2;
             this.btnBuyCar.Text = "Buy a car";
             this.btnBuyCar.UseVisualStyleBackColor = true;
+            this.btnBuyCar.Click += new System.EventHandler(this.btnBuyCar_Click);
             // 
             // btnGetJob
             // 
@@ -119,6 +120,7 @@
             this.btnContinue.TabIndex = 7;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // OptionsMenu
             // 
