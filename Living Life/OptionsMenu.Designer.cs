@@ -90,6 +90,7 @@
             this.btnGoToCollege.TabIndex = 4;
             this.btnGoToCollege.Text = "Go to college";
             this.btnGoToCollege.UseVisualStyleBackColor = true;
+            this.btnGoToCollege.Click += new System.EventHandler(this.btnGoToCollege_Click);
             // 
             // btnOther
             // 
