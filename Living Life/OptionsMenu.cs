@@ -51,6 +51,8 @@ namespace Living_Life
                 mainScreen.Close();
                 return;
             }
+
+            mainScreen.Enabled = true;
         }
 
         // Need a way of telling if an option was chosen.

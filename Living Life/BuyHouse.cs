@@ -44,21 +44,24 @@ namespace Living_Life
                 return;
             }
 
-            if (cancelBtnPressed) return;
+            parentOptions.Enabled = true;
 
-            if (confirmBtnPressed) return;
-
-
+            if (cancelBtnPressed || confirmBtnPressed)
+            {
+                return;
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             confirmBtnPressed = true;
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             cancelBtnPressed = true;
+            this.Close();
         }
     }
 }

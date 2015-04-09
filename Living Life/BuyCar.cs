@@ -116,9 +116,10 @@ namespace Living_Life
                 return;
             }
 
+            parentOptions.Enabled = true;
+
             if (cancelBtnPressed || confirmBtnPressed)
             {
-                parentOptions.Enabled = true;
                 return;
             }
         }
