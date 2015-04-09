@@ -11,17 +11,23 @@ namespace Living_Life
 {
     public partial class OptionsMenu : Form
     {
+        MainScreen mainScreen;
         public OptionsMenu()
         {
             InitializeComponent();
+        }
+        public OptionsMenu(MainScreen mainScreen0)
+        {
+            InitializeComponent();
+            mainScreen = mainScreen0;
+            this.TopMost = true;
         }
 
         private void btnGetJob_Click(object sender, EventArgs e)
         {
             Random rand = new Random();
-            rand.Next(0,21);
-            Job tmp = new Job();
-            
+            int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
+            mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
         }
     }
 }

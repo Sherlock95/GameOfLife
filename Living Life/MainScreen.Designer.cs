@@ -165,6 +165,7 @@
             this.btnOptions.TabIndex = 8;
             this.btnOptions.Text = "Avaliable Options";
             this.btnOptions.UseVisualStyleBackColor = true;
+            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             // 
             // lblCurrentSalary
             // 
