@@ -56,6 +56,7 @@ namespace Living_Life
         }
 
         //This is called from the load menu when it closes to let the main screen know that it should set fields.
+        //Also can be used to update the fields for each month.
         public void UpdateFields()
         {
             lblName.Text = "Name: " + mainGame.player.name;

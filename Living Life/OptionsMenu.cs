@@ -11,15 +11,15 @@ namespace Living_Life
 {
     public partial class OptionsMenu : Form
     {
-        MainScreen mainScreen;
+        public MainScreen mainScreen;
         public OptionsMenu()
         {
             InitializeComponent();
         }
-        public OptionsMenu(MainScreen mainScreen0)
+        public OptionsMenu(MainScreen mainScreen)
         {
             InitializeComponent();
-            mainScreen = mainScreen0;
+            this.mainScreen = mainScreen;
             this.TopMost = true;
         }
 
@@ -28,6 +28,12 @@ namespace Living_Life
             Random rand = new Random();
             int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
             mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
+        }
+
+        private void btnBuyHouse_Click(object sender, EventArgs e)
+        {
+            (new BuyHouse(this)).Show();
+            this.Enabled = false;
         }
     }
 }

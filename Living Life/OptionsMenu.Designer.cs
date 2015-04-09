@@ -57,6 +57,7 @@
             this.btnBuyHouse.TabIndex = 1;
             this.btnBuyHouse.Text = "Buy a new house";
             this.btnBuyHouse.UseVisualStyleBackColor = true;
+            this.btnBuyHouse.Click += new System.EventHandler(this.btnBuyHouse_Click);
             // 
             // btnBuyCar
             // 

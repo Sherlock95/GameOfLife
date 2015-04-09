@@ -32,3 +32,4 @@ C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\D
 C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living Life.csproj.GenerateResource.Cache
 C:\Users\Mobile\Documents\GitHub\GameOfLife\Living Life\obj\Debug\Living Life.exe
 C:\Users\Mobile\Documents\GitHub\GameOfLife\Living Life\obj\Debug\Living Life.pdb
+C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living_Life.BuyHouse.resources
