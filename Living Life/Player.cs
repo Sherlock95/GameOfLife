@@ -11,8 +11,8 @@ namespace Living_Life
         public int age;
         public int wife;
         public int children;
-        public int income;
-        public int savings;
+        public float income;
+        public float savings;
         public int educationLevel;
         public int schoolMonths;
         public Property car;

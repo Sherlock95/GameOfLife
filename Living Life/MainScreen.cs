@@ -56,22 +56,25 @@ namespace Living_Life
         }
 
         //This is called from the load menu when it closes to let the main screen know that it should set fields.
-        public void InitFields()
+        public void UpdateFields()
         {
             lblName.Text = "Name: " + mainGame.player.name;
-            lblAge.Text = "Age " + mainGame.player.age.ToString();
+            lblAge.Text = "Age: " + mainGame.player.age.ToString();
             lblSavings.Text = "Savings: " + mainGame.player.savings.ToString();
-            lblTithes.Text = "Tithes: $" + (mainGame.player.income / 10).ToString();
+            lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
+            lblTithes.Text = "Monthly Tithes: $" + (mainGame.player.income * 0.1).ToString();
 
             if (mainGame.player.job != null)
             {
                 lblJob.Text = "Job: " + mainGame.player.job.name;
-                lblSalary.Text = "Salary: " + mainGame.player.job.salary;
+                lblSalary.Text = "Salary (Per Month): " + mainGame.player.job.salary;
+                lblCurrentSalary.Text = "Salary: " + mainGame.player.job.salary;
             }
             else 
             {
                 lblJob.Text = "Job: None";
-                lblSalary.Text = "Salary: $0";
+                lblSalary.Text = "Salary (Per Month): $0";
+                lblCurrentSalary.Text = "Salary: $0";
             }
             if (mainGame.player.car != null)
             {

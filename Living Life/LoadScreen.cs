@@ -139,7 +139,7 @@ namespace Living_Life
             gameCalled = true;
             mainScreen.Enabled = true;
             mainScreen.mainGame.player = player;
-            mainScreen.InitFields();
+            mainScreen.UpdateFields();
             this.Close();
 
         }
@@ -206,7 +206,7 @@ namespace Living_Life
             mainScreen.mainGame.player = this.player;
             gameCalled = true;
             mainScreen.Enabled = true;
-            mainScreen.InitFields();
+            mainScreen.UpdateFields();
             this.Close();
         }
     }
