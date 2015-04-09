@@ -36,7 +36,7 @@ namespace Living_Life
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            switch (MessageBox.Show(this, "Are you sure you want to quit?", "Closing", MessageBoxButtons.YesNo))
+            switch (MessageBox.Show(this, "Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo))
             {
                 case DialogResult.No:
                     break;
@@ -112,7 +112,14 @@ namespace Living_Life
                 Console.WriteLine("An error occurred when writing player to file: " + ex.Message);
             }
 
-            this.Close();
+            switch (MessageBox.Show(this, "Progress saved.\nAre you sure you want to quit?", "Save and Quit", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    break;
+                default:
+                    this.Close();
+                    break;
+            }
         }
     }
 }
