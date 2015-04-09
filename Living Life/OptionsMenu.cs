@@ -27,7 +27,15 @@ namespace Living_Life
         {
             Random rand = new Random();
             int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
-            mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
+            Job tmpJob =  mainScreen.mainGame.jobs[r];
+            Player tmpPlayer = mainScreen.mainGame.player;
+            if (tmpPlayer.educationLevel >= tmpJob.level)
+            {
+                mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
+            }
+            else { 
+                
+            }
         }
 
         private void btnBuyHouse_Click(object sender, EventArgs e)
