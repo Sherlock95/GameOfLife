@@ -64,7 +64,7 @@
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblName.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(17, 9);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(262, 20);
@@ -76,7 +76,7 @@
             // 
             this.lblAge.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAge.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAge.Location = new System.Drawing.Point(17, 29);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(262, 20);
@@ -88,7 +88,7 @@
             // 
             this.lblSavings.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSavings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSavings.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSavings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSavings.Location = new System.Drawing.Point(17, 61);
             this.lblSavings.Name = "lblSavings";
             this.lblSavings.Size = new System.Drawing.Size(262, 20);
@@ -100,7 +100,7 @@
             // 
             this.lblJob.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblJob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblJob.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJob.Location = new System.Drawing.Point(17, 97);
             this.lblJob.Name = "lblJob";
             this.lblJob.Size = new System.Drawing.Size(262, 20);
@@ -112,7 +112,7 @@
             // 
             this.lblSalary.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSalary.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.Location = new System.Drawing.Point(17, 117);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(262, 20);
@@ -124,7 +124,7 @@
             // 
             this.lblTithes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTithes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTithes.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTithes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTithes.Location = new System.Drawing.Point(17, 137);
             this.lblTithes.Name = "lblTithes";
             this.lblTithes.Size = new System.Drawing.Size(262, 20);
@@ -136,7 +136,7 @@
             // 
             this.lblMarriage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMarriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMarriage.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarriage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarriage.Location = new System.Drawing.Point(17, 178);
             this.lblMarriage.Name = "lblMarriage";
             this.lblMarriage.Size = new System.Drawing.Size(262, 20);
@@ -171,7 +171,7 @@
             // 
             this.lblCurrentSalary.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCurrentSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCurrentSalary.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentSalary.Location = new System.Drawing.Point(208, 281);
             this.lblCurrentSalary.Name = "lblCurrentSalary";
             this.lblCurrentSalary.Size = new System.Drawing.Size(262, 20);
@@ -183,7 +183,7 @@
             // 
             this.lblOtherIncome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblOtherIncome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblOtherIncome.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOtherIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOtherIncome.Location = new System.Drawing.Point(208, 301);
             this.lblOtherIncome.Name = "lblOtherIncome";
             this.lblOtherIncome.Size = new System.Drawing.Size(262, 20);
@@ -195,7 +195,7 @@
             // 
             this.lblTotalIncome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotalIncome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotalIncome.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalIncome.Location = new System.Drawing.Point(208, 321);
             this.lblTotalIncome.Name = "lblTotalIncome";
             this.lblTotalIncome.Size = new System.Drawing.Size(262, 20);
@@ -207,7 +207,7 @@
             // 
             this.lblCurrentTithes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCurrentTithes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCurrentTithes.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentTithes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentTithes.Location = new System.Drawing.Point(208, 358);
             this.lblCurrentTithes.Name = "lblCurrentTithes";
             this.lblCurrentTithes.Size = new System.Drawing.Size(262, 20);
@@ -219,7 +219,7 @@
             // 
             this.lblCurrentHouseBills.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCurrentHouseBills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCurrentHouseBills.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentHouseBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentHouseBills.Location = new System.Drawing.Point(208, 378);
             this.lblCurrentHouseBills.Name = "lblCurrentHouseBills";
             this.lblCurrentHouseBills.Size = new System.Drawing.Size(262, 20);
@@ -231,7 +231,7 @@
             // 
             this.lblCurrentCarBills.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCurrentCarBills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCurrentCarBills.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentCarBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentCarBills.Location = new System.Drawing.Point(208, 398);
             this.lblCurrentCarBills.Name = "lblCurrentCarBills";
             this.lblCurrentCarBills.Size = new System.Drawing.Size(262, 20);
@@ -243,7 +243,7 @@
             // 
             this.lblFamilyExpenses.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFamilyExpenses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFamilyExpenses.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamilyExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFamilyExpenses.Location = new System.Drawing.Point(208, 418);
             this.lblFamilyExpenses.Name = "lblFamilyExpenses";
             this.lblFamilyExpenses.Size = new System.Drawing.Size(262, 20);
@@ -255,7 +255,7 @@
             // 
             this.lblTotalExpenses.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotalExpenses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotalExpenses.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalExpenses.Location = new System.Drawing.Point(208, 438);
             this.lblTotalExpenses.Name = "lblTotalExpenses";
             this.lblTotalExpenses.Size = new System.Drawing.Size(262, 20);
@@ -267,7 +267,7 @@
             // 
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotal.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(208, 478);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(262, 20);
@@ -291,7 +291,7 @@
             // 
             this.lblHouse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblHouse.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHouse.Location = new System.Drawing.Point(474, 162);
             this.lblHouse.Name = "lblHouse";
             this.lblHouse.Size = new System.Drawing.Size(262, 20);
@@ -303,7 +303,7 @@
             // 
             this.lblHouseBills.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHouseBills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblHouseBills.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHouseBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHouseBills.Location = new System.Drawing.Point(474, 182);
             this.lblHouseBills.Name = "lblHouseBills";
             this.lblHouseBills.Size = new System.Drawing.Size(262, 20);
@@ -315,7 +315,7 @@
             // 
             this.lblCarBills.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCarBills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCarBills.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarBills.Location = new System.Drawing.Point(474, 389);
             this.lblCarBills.Name = "lblCarBills";
             this.lblCarBills.Size = new System.Drawing.Size(262, 20);
@@ -327,7 +327,7 @@
             // 
             this.lblCar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCar.Location = new System.Drawing.Point(474, 369);
             this.lblCar.Name = "lblCar";
             this.lblCar.Size = new System.Drawing.Size(262, 20);
@@ -357,6 +357,7 @@
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save and Quit";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnQuit
             // 

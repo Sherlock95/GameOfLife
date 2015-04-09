@@ -43,7 +43,10 @@ namespace Living_Life
             houses = new Property[10];
             cars = new Property[10];
 
-            jobs = new Job[21];
+            for (int i = 0; i < jobs.Length; i++)
+            {
+                jobs[i] = new Job();
+            }
 
             //house information
 

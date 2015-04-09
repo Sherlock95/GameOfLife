@@ -44,6 +44,7 @@ namespace Living_Life
                         lstFiles.Items.Add(sr.ReadLine());
                     }
 
+                    sr.Close();
                 }
             }
             catch (Exception exception)
@@ -82,6 +83,7 @@ namespace Living_Life
                     using (StreamWriter sw = new StreamWriter("SaveFiles.txt", append: true))
                     {
                         sw.WriteLine(player.name);
+                        sw.Close();
                     }
                 }
                 catch (Exception exception)
@@ -98,6 +100,7 @@ namespace Living_Life
                 using (StreamWriter sw = new StreamWriter(player.name + ".xml"))
                 {
                     writer.Serialize(sw, player);
+                    sw.Close();
                 }
             }
             catch (Exception ex)
@@ -106,6 +109,7 @@ namespace Living_Life
                 Console.WriteLine(ex.Message);
             }
 
+            //Keeping around just in case
             //save new file
             //try
             //{
@@ -190,6 +194,7 @@ namespace Living_Life
                     //Load character status here
                     XmlSerializer reader = new XmlSerializer(typeof(Player));
                     player = (Player)reader.Deserialize(sr);
+                    sr.Close();
                 }
             }
             catch (Exception exception)
