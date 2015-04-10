@@ -30,8 +30,8 @@ namespace Living_Life
 
         private void btnNextMonth_Click(object sender, EventArgs e)
         {
-            EndMonth monthEnd = new EndMonth();
-            monthEnd.Show(this);
+            this.Enabled = false;
+            (new EndMonth()).Show(this);
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
