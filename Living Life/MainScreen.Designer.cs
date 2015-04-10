@@ -118,21 +118,9 @@
             this.lblSalary.Text = "Salary (per month):  ";
             this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-<<<<<<< HEAD
-            // lblTithes
-            // 
-            this.lblTithes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTithes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTithes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTithes.Location = new System.Drawing.Point(12, 196);
-            this.lblTithes.Name = "lblTithes";
-            this.lblTithes.Size = new System.Drawing.Size(262, 20);
-            this.lblTithes.TabIndex = 5;
-            this.lblTithes.Text = "Monthly tithes:  ";
-            this.lblTithes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-=======
->>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
+
+
+
             // lblMarriage
             // 
             this.lblMarriage.Anchor = System.Windows.Forms.AnchorStyles.Top;
