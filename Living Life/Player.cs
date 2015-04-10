@@ -11,8 +11,8 @@ namespace Living_Life
         public int age;
         public int wife;
         public int children;
-        public float income;
-        public float savings;
+        public int income;
+        public int savings;
         public int educationLevel;
         public int schoolMonths;
         public Property car;
@@ -41,7 +41,7 @@ namespace Living_Life
             wife = 0;
             children = 0;
             income = 0;
-            savings = 0;
+            savings = 100;
             educationLevel = 0;
             schoolMonths = 0;
             car = null;

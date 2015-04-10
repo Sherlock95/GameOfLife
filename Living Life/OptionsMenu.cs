@@ -15,6 +15,9 @@ namespace Living_Life
         public OptionsMenu()
         {
             InitializeComponent();
+            if(mainScreen.mainGame.player.schoolMonths>0){
+                btnGoToCollege.Text = "Drop Out Of College";
+            }
         }
         public OptionsMenu(MainScreen mainScreen)
         {
@@ -25,9 +28,22 @@ namespace Living_Life
 
         private void btnGetJob_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
-            mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
+            //Should implement the ability to choose job, as I now realize that was the intent instead of random
+            //Random rand = new Random();
+            //int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
+            //Job tmpJob =  mainScreen.mainGame.jobs[r];
+            //Player tmpPlayer = mainScreen.mainGame.player;
+            //if (tmpPlayer.educationLevel >= tmpJob.level)
+            //{
+            //    mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
+            //}
+            //else { 
+                
+            //}
+
+            (new GetJob(this)).Show();
+            this.Enabled = false;
+
         }
 
         private void btnBuyHouse_Click(object sender, EventArgs e)
@@ -60,6 +76,38 @@ namespace Living_Life
         {
             mainScreen.Enabled = true;
             this.Close();
+        }
+
+        private void btnGoToCollege_Click(object sender, EventArgs e)
+        {
+            if (mainScreen.mainGame.player.schoolMonths <= 0)
+            {
+                mainScreen.mainGame.player.schoolMonths = 20;
+                mainScreen.mainGame.player.job.salary /= 2;
+                btnGoToCollege.Text = "Drop Out";
+                mainScreen.UpdateFields();
+                return;
+            }
+            else
+            {
+                mainScreen.mainGame.player.schoolMonths = 0;
+                mainScreen.mainGame.player.job.salary *= 2;
+                btnGoToCollege.Text = "Go To College";
+                mainScreen.UpdateFields();
+                return;
+            }
+        }
+
+        private void OptionsMenu_Load(object sender, EventArgs e)
+        {
+            if (mainScreen.mainGame.player.schoolMonths < 1)
+            {
+                btnGoToCollege.Text = "Go To College";
+            }
+            else
+            {
+                btnGoToCollege.Text = "Drop Out";
+            }
         }
     }
 }

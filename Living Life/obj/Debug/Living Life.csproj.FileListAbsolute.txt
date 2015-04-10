@@ -34,3 +34,18 @@ C:\Users\Mobile\Documents\GitHub\GameOfLife\Living Life\obj\Debug\Living Life.ex
 C:\Users\Mobile\Documents\GitHub\GameOfLife\Living Life\obj\Debug\Living Life.pdb
 C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living_Life.BuyHouse.resources
 C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living_Life.BuyCar.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living Life.exe
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living Life.pdb
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\bin\Debug\Living Life.exe
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\bin\Debug\Living Life.pdb
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living Life.csprojResolveAssemblyReference.cache
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.BuyCar.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.BuyHouse.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.EndMonth.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.MainScreen.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.LoadScreen.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.OptionsMenu.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.Properties.Resources.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living Life.csproj.GenerateResource.Cache
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.GetJob.resources
+C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living_Life.GetJob.resources

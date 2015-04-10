@@ -90,6 +90,7 @@
             this.btnGoToCollege.TabIndex = 4;
             this.btnGoToCollege.Text = "Go to college";
             this.btnGoToCollege.UseVisualStyleBackColor = true;
+            this.btnGoToCollege.Click += new System.EventHandler(this.btnGoToCollege_Click);
             // 
             // btnOther
             // 
@@ -137,6 +138,7 @@
             this.Controls.Add(this.lblPrompt);
             this.Name = "OptionsMenu";
             this.Text = "What to do?  ";
+            this.Load += new System.EventHandler(this.OptionsMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

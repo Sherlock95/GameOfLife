@@ -126,9 +126,22 @@ namespace Living_Life
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            confirmBtnPressed = true;
-            parentOptions.Enabled = true;
-            this.Close();
+
+            if ((parentOptions.mainScreen.mainGame.player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex]) > parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex].downPayment))
+            {
+                parentOptions.mainScreen.mainGame.player.savings -= parentOptions.mainScreen.mainGame.houses[lstCars.SelectedIndex].downPayment;
+                confirmBtnPressed = true;
+                parentOptions.Enabled = true;
+                parentOptions.mainScreen.mainGame.player.car = parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex]; //sets the new car
+                parentOptions.mainScreen.UpdateFields();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("You has not the monies");  
+            }
+
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
