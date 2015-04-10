@@ -35,8 +35,22 @@ namespace Living_Life
             monthEnd.Show();
         }
         private void familyEvent() {
-            if (this.mainGame.player.wife == 1) { 
-                
+            if (this.mainGame.player.wife == 1){
+            
+            }
+            else {
+                Random rand = new Random();
+                int r = rand.Next(0,10) % 2;
+                if (r==0) {
+                    switch (MessageBox.Show(this, "You can get married. Do you want to?", "MARRIAGE", MessageBoxButtons.YesNo))
+                    {
+                        case DialogResult.No:
+                            break;
+                        default:
+                            this.mainGame.player.wife = 1;
+                            break;
+                    } 
+                }
             }
         }
         private void btnQuit_Click(object sender, EventArgs e)
