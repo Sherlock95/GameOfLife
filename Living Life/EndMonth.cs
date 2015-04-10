@@ -150,6 +150,11 @@ namespace Living_Life
                     player.job.salary *= 2;
                 }
             }
+
+            if (player.wife == 1)
+            {
+                //Pregnancy stuff goes here, yo.
+            }
         }
 
         private void btnContinue_Click(object sender, EventArgs e)
