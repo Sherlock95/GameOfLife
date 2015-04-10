@@ -20,11 +20,11 @@ namespace Living_Life
         public GetJob(OptionsMenu parentOptions)
         {
             InitializeComponent();
-            confirmBtnPressed = false;
-            cancelBtnPressed = false;
-            this.parentOptions = parentOptions;
-            GetJobs();
-            this.TopMost = true;
+            confirmBtnPressed = false;  //a variable that doesn't seem to be doing much
+            cancelBtnPressed = false;  //another seemingly useless variable
+            this.parentOptions = parentOptions;  //gets the parent menu so that we can have access to all the game information.  we will need it.  
+            GetJobs();  //displays all the jobs available in a listbox
+            this.TopMost = true;  //sets this form as the dominant form on the screen
         }
 
         private void GetJobs()
@@ -32,8 +32,8 @@ namespace Living_Life
 
             foreach (Job job in parentOptions.mainScreen.mainGame.jobs)
             {
-                string jobString = job.name + "\n\tEducation Level Required: " + job.level + "\n\tSalary: $" + job.salary + "\n";
-                lstJobs.Items.Add(jobString);
+                string jobString = job.name + "\n\tEducation Level Required: " + job.level + "\n\tSalary: $" + job.salary + "\n";  //stores job info to a string
+                lstJobs.Items.Add(jobString); //displays job info in a listbox
             }
 
         }
@@ -66,19 +66,17 @@ namespace Living_Life
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if(lstJobs.SelectedItem==null){
-                MessageBox.Show("You must select a job or cancel");
-            }
-            else if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)
+
+            if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)  //check to see if the player is educated enough
             {
 
-                Job newJob = new Job();
-                newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;
-                newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;
-                newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;
-                if (parentOptions.mainScreen.mainGame.player.schoolMonths > 0)
+                Job newJob = new Job();  //make a new job based on a job in the list of jobs
+                newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;  //this seems unnecessary, but we were having pointer issues
+                newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;  //by making a new job based off of an old one we can get around the pointer issues
+                newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;  //it just works this way
+                if (parentOptions.mainScreen.mainGame.player.schoolMonths > 0)  //check to see if the player is in college
                 {
-                    newJob.salary /= 2;
+                    newJob.salary /= 2;  //half the salary if in college
                 }
                 parentOptions.mainScreen.mainGame.player.job = newJob; //sets new job
                 confirmBtnPressed = true;
@@ -89,7 +87,7 @@ namespace Living_Life
             }
             else
             {
-                MessageBox.Show("You have not the education required for this job");
+                MessageBox.Show("You have not the education required for this job");  //tell player they are dumb
             }
 
         }
