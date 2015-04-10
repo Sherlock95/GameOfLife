@@ -29,7 +29,13 @@ namespace Living_Life
         //Load in the houses to be bought
         public void GetHouses()
         {
-            
+
+            foreach (Property house in parentOptions.mainScreen.mainGame.houses)
+            {
+                string houseString = house.name + "\n\tTotal Value: $" + house.totalValue + "\n\tDown Payment: $" + house.downPayment + "\n\tMonthly Payment: $" + house.monthlyPayment + " for " + house.duration + " months\n\tInsurance: " + house.insurance + "\n";
+                lstHouses.Items.Add(houseString);
+            }
+
         }
 
         //Override the default closing operation because clicking the "x" should re-enable the options.
@@ -54,8 +60,24 @@ namespace Living_Life
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            confirmBtnPressed = true;
-            this.Close();
+
+            parentOptions.mainScreen.mainGame.player.savings = 100;
+
+            if ((parentOptions.mainScreen.mainGame.player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
+            {
+                parentOptions.mainScreen.mainGame.player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
+                confirmBtnPressed = true;
+                parentOptions.Enabled = true;
+                parentOptions.mainScreen.mainGame.player.house = parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]; //sets the new car
+                parentOptions.mainScreen.UpdateFields();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("You has not the monies");  
+            }
+
+           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -63,5 +85,7 @@ namespace Living_Life
             cancelBtnPressed = true;
             this.Close();
         }
+
+      
     }
 }
