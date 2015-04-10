@@ -32,8 +32,8 @@ namespace Living_Life
 
             foreach (Job job in parentOptions.mainScreen.mainGame.jobs)
             {
-                string houseString = job.name + "\n\tEducation Level Required: " + job.level + "\n\tSalary: $" + job.salary + "\n";
-                lstJobs.Items.Add(houseString);
+                string jobString = job.name + "\n\tEducation Level Required: " + job.level + "\n\tSalary: $" + job.salary + "\n";
+                lstJobs.Items.Add(jobString);
             }
 
         }
@@ -70,7 +70,15 @@ namespace Living_Life
             if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)
             {
 
-                parentOptions.mainScreen.mainGame.player.job = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex]; //sets new job
+                Job newJob = new Job();
+                newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;
+                newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;
+                newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;
+                if (parentOptions.mainScreen.mainGame.player.schoolMonths > 0)
+                {
+                    newJob.salary /= 2;
+                }
+                parentOptions.mainScreen.mainGame.player.job = newJob; //sets new job
                 confirmBtnPressed = true;
                 parentOptions.Enabled = true;
                 parentOptions.mainScreen.UpdateFields();
