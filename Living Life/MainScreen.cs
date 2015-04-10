@@ -17,6 +17,8 @@ namespace Living_Life
 
         public Main mainGame;
 
+        public Random generator;
+
         public MainScreen()
         {
             InitializeComponent();
@@ -26,12 +28,13 @@ namespace Living_Life
         {
             InitializeComponent();
             mainGame.player = newPlayer;
+            generator = new Random();
         }
 
         private void btnNextMonth_Click(object sender, EventArgs e)
         {
-            EndMonth monthEnd = new EndMonth();
-            monthEnd.Show(this);
+            this.Enabled = false;
+            (new EndMonth(this)).Show();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

@@ -48,3 +48,4 @@ C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.OptionsMenu
 C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.Properties.Resources.resources
 C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living Life.csproj.GenerateResource.Cache
 C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living_Life.GetJob.resources
+C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living_Life.GetJob.resources
