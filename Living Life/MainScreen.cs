@@ -119,6 +119,15 @@ namespace Living_Life
                 lblMarriage.Text = "Marriage Status: Married";
             }
 
+            if (mainGame.player.schoolMonths > 0)
+            {
+                lblSchool.Text = "College Status:  " + mainGame.player.schoolMonths + " months left";
+            }
+            else
+            {
+                lblSchool.Text = "College Status:  Not In College";
+            }
+
         }
 
         // Save Game and Exit

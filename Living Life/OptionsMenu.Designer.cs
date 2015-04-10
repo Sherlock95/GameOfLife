@@ -138,6 +138,7 @@
             this.Controls.Add(this.lblPrompt);
             this.Name = "OptionsMenu";
             this.Text = "What to do?  ";
+            this.Load += new System.EventHandler(this.OptionsMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
