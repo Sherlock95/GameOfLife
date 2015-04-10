@@ -34,7 +34,6 @@
             this.lblSavings = new System.Windows.Forms.Label();
             this.lblJob = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
-            this.lblTithes = new System.Windows.Forms.Label();
             this.lblMarriage = new System.Windows.Forms.Label();
             this.btnNextMonth = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
@@ -119,18 +118,6 @@
             this.lblSalary.TabIndex = 4;
             this.lblSalary.Text = "Salary (per month):  ";
             this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblTithes
-            // 
-            this.lblTithes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTithes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTithes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTithes.Location = new System.Drawing.Point(12, 174);
-            this.lblTithes.Name = "lblTithes";
-            this.lblTithes.Size = new System.Drawing.Size(262, 20);
-            this.lblTithes.TabIndex = 5;
-            this.lblTithes.Text = "Monthly tithes:  ";
-            this.lblTithes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblMarriage
             // 
@@ -412,7 +399,6 @@
             this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.btnNextMonth);
             this.Controls.Add(this.lblMarriage);
-            this.Controls.Add(this.lblTithes);
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.lblJob);
             this.Controls.Add(this.lblSavings);
@@ -436,7 +422,6 @@
         private System.Windows.Forms.Label lblSavings;
         private System.Windows.Forms.Label lblJob;
         private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.Label lblTithes;
         private System.Windows.Forms.Label lblMarriage;
         private System.Windows.Forms.Button btnNextMonth;
         private System.Windows.Forms.Button btnOptions;

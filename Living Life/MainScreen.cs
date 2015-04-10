@@ -71,9 +71,10 @@ namespace Living_Life
             lblName.Text = "Name: " + mainGame.player.name;
             lblAge.Text = "Age: " + mainGame.player.age.ToString();
             lblSavings.Text = "Savings: " + mainGame.player.savings.ToString();
-            lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
-            lblTithes.Text = "Monthly Tithes: $" + (mainGame.player.income * 0.1).ToString();
-
+            if(player.tithe)
+             lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
+            else
+                lblCurrentTithes.Text = "Tithes: $0";
             if (mainGame.player.job != null)
             {
                 lblJob.Text = "Job: " + mainGame.player.job.name;

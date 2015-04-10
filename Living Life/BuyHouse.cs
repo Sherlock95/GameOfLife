@@ -63,8 +63,8 @@ namespace Living_Life
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-         
-            if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
+            if (lstHouses.SelectedItem == null)  MessageBox.Show("Chose a house"); 
+            else if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
             {
                 player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
                 confirmBtnPressed = true;
