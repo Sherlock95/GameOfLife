@@ -30,10 +30,15 @@ namespace Living_Life
 
         private void btnNextMonth_Click(object sender, EventArgs e)
         {
+            familyEvent();
             EndMonth monthEnd = new EndMonth();
             monthEnd.Show();
         }
-
+        private void familyEvent() {
+            if (this.mainGame.player.wife == 1) { 
+                
+            }
+        }
         private void btnQuit_Click(object sender, EventArgs e)
         {
             switch (MessageBox.Show(this, "Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo))
@@ -122,6 +127,13 @@ namespace Living_Life
                     this.Close();
                     break;
             }
+        }
+
+        private void btnOptions_Click(object sender, EventArgs e)
+        {
+            OptionsMenu optionsMenue = new OptionsMenu(this);
+            this.Enabled = false;
+            optionsMenue.Show();
         }
     }
 }
