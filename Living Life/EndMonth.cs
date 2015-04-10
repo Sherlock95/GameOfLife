@@ -38,15 +38,16 @@ namespace Living_Life
 
         private Event GenerateEvent()
         {
-            Random generator = new Random();
-            int eventNum = generator.Next(0, 11);
-
+            int eventNum = mainScreen.generator.Next(0, 11);
+            Console.WriteLine(eventNum.ToString());
             //No Event
             if (eventNum < 4)
             {
                 eventHappens = false;
                 Event randomEvent = new Event();
-                randomEvent.description = "n";
+                randomEvent.description = "Nothing";
+                randomEvent.cost = 0;
+                Console.WriteLine("NOTHING");
                 return randomEvent;
             }
             //Common event
@@ -54,9 +55,11 @@ namespace Living_Life
             {
                 eventHappens = true;
                 Event randomEvent = new Event();
-                int index = generator.Next(0, mainScreen.mainGame.commonEvents.Length);
+                int index = mainScreen.generator.Next(0, mainScreen.mainGame.commonEvents.Length);
                 randomEvent.description = mainScreen.mainGame.commonEvents[index].description;
                 randomEvent.cost = mainScreen.mainGame.commonEvents[index].cost;
+                Console.WriteLine(index.ToString());
+                Console.WriteLine(randomEvent.description);
                 return randomEvent;
             }
             //Rare Event
@@ -64,9 +67,11 @@ namespace Living_Life
             {
                 eventHappens = true;
                 Event randomEvent = new Event();
-                int index = generator.Next(0, mainScreen.mainGame.rareEvents.Length);
+                int index = mainScreen.generator.Next(0, mainScreen.mainGame.rareEvents.Length);
                 randomEvent.description = mainScreen.mainGame.rareEvents[index].description;
                 randomEvent.cost = mainScreen.mainGame.rareEvents[index].cost;
+                Console.WriteLine(index.ToString());
+                Console.WriteLine(randomEvent.description);
                 return randomEvent;
             }
         }
@@ -84,7 +89,16 @@ namespace Living_Life
                     expenses += randomEvents[i].cost;
                 else if (randomEvents[i].cost > 0)
                     earnings += randomEvents[i].cost;
+                else
+                    continue;
             }
+
+            lblEventTitle1.Text = randomEvents[0].description;
+            lblEventDescription1.Text = "This event costed: $" + randomEvents[0].cost.ToString();
+            lblEventTitle2.Text = randomEvents[1].description;
+            lblEventDescription2.Text = "This event costed: $" + randomEvents[1].cost.ToString();
+            lblEventTitle3.Text = randomEvents[2].description;
+            lblEventDescription3.Text = "This event costed: $" + randomEvents[2].cost.ToString();
 
             if (!(mainScreen.mainGame.player.house == null || mainScreen.mainGame.player.house.duration == 0))
             {
@@ -98,18 +112,19 @@ namespace Living_Life
                 mainScreen.mainGame.player.car.duration--;
             }
 
-            mainScreen.mainGame.player.income = mainScreen.mainGame.player.job.salary - (mainScreen.mainGame.player.job.salary*10)/100;
+            mainScreen.mainGame.player.income = ((mainScreen.mainGame.player.job != null) ?  mainScreen.mainGame.player.job.salary - (mainScreen.mainGame.player.job.salary*10)/100 : 0);
             earnings += mainScreen.mainGame.player.income;
 
             lblEarningsSummary.Text = earnings.ToString();
             lblTotalExpenses.Text = expenses.ToString();
 
-            mainScreen.mainGame.player.savings += earnings;
+            mainScreen.mainGame.player.savings = mainScreen.mainGame.player.savings + earnings + expenses;
             lblTotalSavings.Text = mainScreen.mainGame.player.savings.ToString();
         }
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
+            continueCalled = true;
             this.Close();
         }
 

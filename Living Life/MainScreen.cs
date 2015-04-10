@@ -17,6 +17,8 @@ namespace Living_Life
 
         public Main mainGame;
 
+        public Random generator;
+
         public MainScreen()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace Living_Life
         {
             InitializeComponent();
             mainGame.player = newPlayer;
+            generator = new Random();
         }
 
         private void btnNextMonth_Click(object sender, EventArgs e)
