@@ -9,31 +9,31 @@ using System.Windows.Forms;
 
 namespace Living_Life
 {
-    public partial class BuyHouse : Form
+    public partial class GetJob : Form
     {
+
         public OptionsMenu parentOptions;
 
         private bool cancelBtnPressed;
         private bool confirmBtnPressed;
 
-        public BuyHouse(OptionsMenu parentOptions)
+        public GetJob(OptionsMenu parentOptions)
         {
             InitializeComponent();
             confirmBtnPressed = false;
             cancelBtnPressed = false;
             this.parentOptions = parentOptions;
-            GetHouses();
+            GetJobs();
             this.TopMost = true;
         }
 
-        //Load in the houses to be bought
-        public void GetHouses()
+        private void GetJobs()
         {
 
-            foreach (Property house in parentOptions.mainScreen.mainGame.houses)
+            foreach (Job job in parentOptions.mainScreen.mainGame.jobs)
             {
-                string houseString = house.name + "\n\tTotal Value: $" + house.totalValue + "\n\tDown Payment: $" + house.downPayment + "\n\tMonthly Payment: $" + house.monthlyPayment + " for " + house.duration + " months\n\tInsurance: " + house.insurance + "\n";
-                lstHouses.Items.Add(houseString);
+                string houseString = job.name + "\n\tEducation Level Required: " + job.level + "\n\tSalary: $" + job.salary + "\n";
+                lstJobs.Items.Add(houseString);
             }
 
         }
@@ -58,33 +58,31 @@ namespace Living_Life
             }
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-
-         
-            if ((parentOptions.mainScreen.mainGame.player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
-            {
-                parentOptions.mainScreen.mainGame.player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
-                confirmBtnPressed = true;
-                parentOptions.Enabled = true;
-                parentOptions.mainScreen.mainGame.player.house = parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]; //sets the new car
-                parentOptions.mainScreen.UpdateFields();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("You has not the monies");  
-            }
-
-           
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             cancelBtnPressed = true;
             this.Close();
         }
 
-      
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+
+            if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)
+            {
+
+                parentOptions.mainScreen.mainGame.player.job = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex]; //sets new job
+                confirmBtnPressed = true;
+                parentOptions.Enabled = true;
+                parentOptions.mainScreen.UpdateFields();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("You have not the education required for this job");
+            }
+
+        }
+        
     }
 }
