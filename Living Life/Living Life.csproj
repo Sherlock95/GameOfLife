@@ -53,11 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuyCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyCar.Designer.cs">
+      <DependentUpon>BuyCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="EndMonth.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EndMonth.Designer.cs">
       <DependentUpon>EndMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyHouse.Designer.cs">
+      <DependentUpon>BuyHouse.cs</DependentUpon>
     </Compile>
     <Compile Include="Job.cs" />
     <Compile Include="MainScreen.cs">
@@ -82,6 +94,12 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BuyCar.resx">
+      <DependentUpon>BuyCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyHouse.resx">
+      <DependentUpon>BuyHouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EndMonth.resx">
       <DependentUpon>EndMonth.cs</DependentUpon>
     </EmbeddedResource>

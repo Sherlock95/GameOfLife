@@ -57,6 +57,7 @@
             this.btnBuyHouse.TabIndex = 1;
             this.btnBuyHouse.Text = "Buy a new house";
             this.btnBuyHouse.UseVisualStyleBackColor = true;
+            this.btnBuyHouse.Click += new System.EventHandler(this.btnBuyHouse_Click);
             // 
             // btnBuyCar
             // 
@@ -67,6 +68,7 @@
             this.btnBuyCar.TabIndex = 2;
             this.btnBuyCar.Text = "Buy a car";
             this.btnBuyCar.UseVisualStyleBackColor = true;
+            this.btnBuyCar.Click += new System.EventHandler(this.btnBuyCar_Click);
             // 
             // btnGetJob
             // 
@@ -88,6 +90,7 @@
             this.btnGoToCollege.TabIndex = 4;
             this.btnGoToCollege.Text = "Go to college";
             this.btnGoToCollege.UseVisualStyleBackColor = true;
+            this.btnGoToCollege.Click += new System.EventHandler(this.btnGoToCollege_Click);
             // 
             // btnOther
             // 
@@ -118,6 +121,7 @@
             this.btnContinue.TabIndex = 7;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // OptionsMenu
             // 
