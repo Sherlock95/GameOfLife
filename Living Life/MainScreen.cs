@@ -77,16 +77,39 @@ namespace Living_Life
                 lblSalary.Text = "Salary (Per Month): $0";
                 lblCurrentSalary.Text = "Salary: $0";
             }
+
             if (mainGame.player.car != null)
             {
                 lblCar.Text = "Car: " + mainGame.player.car.name;
+                lblCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment;
+                lblCurrentCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment;
+                picCar.Image = Image.FromFile(mainGame.player.car.name + ".jpg");
                 // What is the difference between car bills and monthly car bills????
+                //I don't knooooooooooooooowwwwwwwww!!!!!!!!!
             }
             else
             {
                 lblCar.Text = "Car: None";
                 lblCarBills.Text = "Car Bills (Monthly): None";
+                lblCurrentCarBills.Text = "Car Bills:  None";
+                
             }
+
+            if (mainGame.player.house != null)
+            {
+                lblHouse.Text = "House:  " + mainGame.player.house.name;
+                lblHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment;
+                lblCurrentHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment;
+                picHouse.Image = Image.FromFile(mainGame.player.house.name + ".jpg");
+            }
+            else
+            {
+                lblHouse.Text = "House:  None";
+                lblHouseBills.Text = "House Bills: None";
+                lblCurrentHouseBills.Text = "House Bills:  None";
+            }
+
+
             if (mainGame.player.wife == 0)
             {
                 lblMarriage.Text = "Marriage Status: Not Married";
@@ -95,6 +118,7 @@ namespace Living_Life
             {
                 lblMarriage.Text = "Marriage Status: Married";
             }
+
         }
 
         // Save Game and Exit

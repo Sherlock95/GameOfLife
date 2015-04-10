@@ -41,7 +41,7 @@ namespace Living_Life
             wife = 0;
             children = 0;
             income = 0;
-            savings = 0;
+            savings = 100;
             educationLevel = 0;
             schoolMonths = 0;
             car = null;

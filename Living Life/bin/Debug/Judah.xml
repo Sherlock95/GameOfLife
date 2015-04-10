@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Player xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <name>jarrett</name>
+  <name>Judah</name>
   <age>18</age>
   <wife>0</wife>
   <children>0</children>
@@ -8,6 +8,14 @@
   <savings>100</savings>
   <educationLevel>0</educationLevel>
   <schoolMonths>0</schoolMonths>
+  <car>
+    <name>Bus</name>
+    <totalValue>0</totalValue>
+    <downPayment>0</downPayment>
+    <monthlyPayment>175</monthlyPayment>
+    <duration>0</duration>
+    <insurance>0</insurance>
+  </car>
   <house>
     <name>Parent's House</name>
     <totalValue>0</totalValue>
@@ -16,9 +24,4 @@
     <duration>0</duration>
     <insurance>0</insurance>
   </house>
-  <job>
-    <name>Software Engineer</name>
-    <level>3</level>
-    <salary>6000</salary>
-  </job>
 </Player>
