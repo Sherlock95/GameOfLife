@@ -12,6 +12,7 @@ namespace Living_Life
     public partial class EndMonth : Form
     {
         public MainScreen mainScreen;
+        public Player player;
 
         private Random generator;
         private bool continueCalled;
@@ -38,11 +39,12 @@ namespace Living_Life
             UpdateFields();
         }
 
-        public EndMonth(MainScreen mainScreen, Random generator)
+        public EndMonth(MainScreen mainScreen, Random generator, Player player)
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
             this.generator = generator;
+            this.player = player;
             continueCalled = false;
             eventHappens = false;
             UpdateFields();
@@ -132,6 +134,22 @@ namespace Living_Life
 
             mainScreen.mainGame.player.savings = mainScreen.mainGame.player.savings + earnings + expenses;
             lblTotalSavings.Text = mainScreen.mainGame.player.savings.ToString();
+
+            if (mainScreen.monthsPassed == 12)
+            {
+                mainScreen.monthsPassed = 0;
+                mainScreen.mainGame.player.age++;
+            }
+
+            if (mainScreen.mainGame.player.schoolMonths != 0)
+            {
+                mainScreen.mainGame.player.schoolMonths--;
+                if (mainScreen.mainGame.player.schoolMonths == 0)
+                {
+                    mainScreen.mainGame.player.educationLevel++;
+                    mainScreen.mainGame.player.job.salary *= 2;
+                }
+            }
         }
 
         private void btnContinue_Click(object sender, EventArgs e)
