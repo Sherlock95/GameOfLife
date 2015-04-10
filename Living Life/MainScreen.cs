@@ -31,7 +31,7 @@ namespace Living_Life
         private void btnNextMonth_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            (new EndMonth()).Show(this);
+            (new EndMonth(this)).Show();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

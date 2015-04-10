@@ -126,7 +126,7 @@ namespace Living_Life
             if (continueCalled)
                 mainScreen.UpdateFields();
 
-            this.mainScreen.Enabled = true;
+            mainScreen.Enabled = true;
         }
     }
 }
