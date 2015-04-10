@@ -88,7 +88,7 @@ namespace Living_Life
             if (mainGame.player.car != null)
             {
                 lblCar.Text = "Car: " + mainGame.player.car.name;
-                lblCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment;
+                lblCarBills.Text = "Car Bills (Monthly):  " + mainGame.player.car.monthlyPayment;
                 lblCurrentCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment;
                 picCar.Image = Image.FromFile(mainGame.player.car.name + ".jpg");
                 // What is the difference between car bills and monthly car bills????
@@ -105,7 +105,7 @@ namespace Living_Life
             if (mainGame.player.house != null)
             {
                 lblHouse.Text = "House:  " + mainGame.player.house.name;
-                lblHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment;
+                lblHouseBills.Text = "House Bills (Monthly):  " + mainGame.player.house.monthlyPayment;
                 lblCurrentHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment;
                 picHouse.Image = Image.FromFile(mainGame.player.house.name + ".jpg");
             }

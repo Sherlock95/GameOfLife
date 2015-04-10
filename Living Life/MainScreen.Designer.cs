@@ -39,7 +39,6 @@
             this.btnNextMonth = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
             this.lblCurrentSalary = new System.Windows.Forms.Label();
-            this.lblOtherIncome = new System.Windows.Forms.Label();
             this.lblTotalIncome = new System.Windows.Forms.Label();
             this.lblCurrentTithes = new System.Windows.Forms.Label();
             this.lblCurrentHouseBills = new System.Windows.Forms.Label();
@@ -89,7 +88,7 @@
             this.lblSavings.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSavings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSavings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSavings.Location = new System.Drawing.Point(12, 100);
+            this.lblSavings.Location = new System.Drawing.Point(12, 111);
             this.lblSavings.Name = "lblSavings";
             this.lblSavings.Size = new System.Drawing.Size(262, 20);
             this.lblSavings.TabIndex = 2;
@@ -101,7 +100,7 @@
             this.lblJob.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblJob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJob.Location = new System.Drawing.Point(12, 134);
+            this.lblJob.Location = new System.Drawing.Point(12, 156);
             this.lblJob.Name = "lblJob";
             this.lblJob.Size = new System.Drawing.Size(262, 20);
             this.lblJob.TabIndex = 3;
@@ -113,7 +112,7 @@
             this.lblSalary.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(12, 154);
+            this.lblSalary.Location = new System.Drawing.Point(12, 176);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(262, 20);
             this.lblSalary.TabIndex = 4;
@@ -125,7 +124,7 @@
             this.lblTithes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTithes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTithes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTithes.Location = new System.Drawing.Point(12, 174);
+            this.lblTithes.Location = new System.Drawing.Point(12, 196);
             this.lblTithes.Name = "lblTithes";
             this.lblTithes.Size = new System.Drawing.Size(262, 20);
             this.lblTithes.TabIndex = 5;
@@ -137,7 +136,7 @@
             this.lblMarriage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMarriage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMarriage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarriage.Location = new System.Drawing.Point(12, 227);
+            this.lblMarriage.Location = new System.Drawing.Point(12, 262);
             this.lblMarriage.Name = "lblMarriage";
             this.lblMarriage.Size = new System.Drawing.Size(262, 20);
             this.lblMarriage.TabIndex = 6;
@@ -173,31 +172,19 @@
             this.lblCurrentSalary.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCurrentSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCurrentSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentSalary.Location = new System.Drawing.Point(12, 258);
+            this.lblCurrentSalary.Location = new System.Drawing.Point(12, 315);
             this.lblCurrentSalary.Name = "lblCurrentSalary";
             this.lblCurrentSalary.Size = new System.Drawing.Size(262, 20);
             this.lblCurrentSalary.TabIndex = 9;
             this.lblCurrentSalary.Text = "Salary:  ";
             this.lblCurrentSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblOtherIncome
-            // 
-            this.lblOtherIncome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblOtherIncome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblOtherIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtherIncome.Location = new System.Drawing.Point(12, 278);
-            this.lblOtherIncome.Name = "lblOtherIncome";
-            this.lblOtherIncome.Size = new System.Drawing.Size(262, 20);
-            this.lblOtherIncome.TabIndex = 10;
-            this.lblOtherIncome.Text = "Other Income:  ";
-            this.lblOtherIncome.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // lblTotalIncome
             // 
             this.lblTotalIncome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotalIncome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTotalIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalIncome.Location = new System.Drawing.Point(12, 298);
+            this.lblTotalIncome.Location = new System.Drawing.Point(12, 435);
             this.lblTotalIncome.Name = "lblTotalIncome";
             this.lblTotalIncome.Size = new System.Drawing.Size(262, 20);
             this.lblTotalIncome.TabIndex = 11;
@@ -377,7 +364,7 @@
             this.lblSchool.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSchool.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSchool.Location = new System.Drawing.Point(12, 207);
+            this.lblSchool.Location = new System.Drawing.Point(12, 242);
             this.lblSchool.Name = "lblSchool";
             this.lblSchool.Size = new System.Drawing.Size(262, 20);
             this.lblSchool.TabIndex = 26;
@@ -407,7 +394,6 @@
             this.Controls.Add(this.lblCurrentHouseBills);
             this.Controls.Add(this.lblCurrentTithes);
             this.Controls.Add(this.lblTotalIncome);
-            this.Controls.Add(this.lblOtherIncome);
             this.Controls.Add(this.lblCurrentSalary);
             this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.btnNextMonth);
@@ -441,7 +427,6 @@
         private System.Windows.Forms.Button btnNextMonth;
         private System.Windows.Forms.Button btnOptions;
         private System.Windows.Forms.Label lblCurrentSalary;
-        private System.Windows.Forms.Label lblOtherIncome;
         private System.Windows.Forms.Label lblTotalIncome;
         private System.Windows.Forms.Label lblCurrentTithes;
         private System.Windows.Forms.Label lblCurrentHouseBills;
