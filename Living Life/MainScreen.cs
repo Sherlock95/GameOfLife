@@ -16,26 +16,31 @@ namespace Living_Life
     {
 
         public Main mainGame;
-
         public Random generator;
+        public int monthsPassed;
+        public Player player;
 
         public MainScreen()
         {
             InitializeComponent();
             generator = new Random();
+            monthsPassed = 0;
         }
 
         public MainScreen(Player newPlayer)
         {
             InitializeComponent();
+            this.player = newPlayer;
             mainGame.player = newPlayer;
             generator = new Random();
+            monthsPassed = 0;
         }
 
         private void btnNextMonth_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            (new EndMonth(this, generator)).Show();
+            monthsPassed++;
+            (new EndMonth(this, generator, player)).Show();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -166,7 +171,7 @@ namespace Living_Life
         private void btnOptions_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            OptionsMenu options = new OptionsMenu(this);
+            OptionsMenu options = new OptionsMenu(this, player);
             options.Show();
         }
     }
