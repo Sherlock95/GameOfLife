@@ -11,54 +11,43 @@ namespace Living_Life
 {
     public partial class OptionsMenu : Form
     {
-        public MainScreen mainScreen;
+        public MainScreen mainScreen;  //gets the main screen so we can get game info
         public OptionsMenu()
         {
             InitializeComponent();
-            if(mainScreen.mainGame.player.schoolMonths>0){
-                btnGoToCollege.Text = "Drop Out Of College";
+            if(mainScreen.mainGame.player.schoolMonths>0)  //checks to see if in college
+            {
+                btnGoToCollege.Text = "Drop Out Of College";  //sets college button to tell player they are in college
             }
         }
         public OptionsMenu(MainScreen mainScreen)
         {
             InitializeComponent();
-            this.mainScreen = mainScreen;
-            this.TopMost = true;
+            this.mainScreen = mainScreen;  //sets mainscreen so we can have game stuffs
+            this.TopMost = true;  //sets this to the top scree
         }
 
         private void btnGetJob_Click(object sender, EventArgs e)
         {
-            //Should implement the ability to choose job, as I now realize that was the intent instead of random
-            //Random rand = new Random();
-            //int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
-            //Job tmpJob =  mainScreen.mainGame.jobs[r];
-            //Player tmpPlayer = mainScreen.mainGame.player;
-            //if (tmpPlayer.educationLevel >= tmpJob.level)
-            //{
-            //    mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
-            //}
-            //else { 
-                
-            //}
-
-            (new GetJob(this)).Show();
-            this.Enabled = false;
+      
+            (new GetJob(this)).Show();  //makes a get job form
+            this.Enabled = false;  //prevents user from messing with things while picking a job
 
         }
 
         private void btnBuyHouse_Click(object sender, EventArgs e)
         {
-            (new BuyHouse(this)).Show();
-            this.Enabled = false;
+            (new BuyHouse(this)).Show();  //makes a buy house form
+            this.Enabled = false;  //prevents user from messing with things while picking a house
         }
 
         private void btnBuyCar_Click(object sender, EventArgs e)
         {
-            (new BuyCar(this)).Show();
-            this.Enabled = false;
+            (new BuyCar(this)).Show();  //makes a buy car form
+            this.Enabled = false; //prevents user from messing with things while picking a car
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)  //overrides close so that control goes to the correct form
         {
             base.OnFormClosing(e);
 
@@ -71,36 +60,35 @@ namespace Living_Life
             mainScreen.Enabled = true;
         }
 
-        // Need a way of telling if an option was chosen.
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            mainScreen.Enabled = true;
+            mainScreen.Enabled = true;  //gives control to mainscreen
             this.Close();
         }
 
-        private void btnGoToCollege_Click(object sender, EventArgs e)
+        private void btnGoToCollege_Click(object sender, EventArgs e)  //goes to or drops out of college
         {
-            if (mainScreen.mainGame.player.schoolMonths <= 0)
+            if (mainScreen.mainGame.player.schoolMonths <= 0)  //checks to see if player is not in college
             {
-                mainScreen.mainGame.player.schoolMonths = 20;
-                mainScreen.mainGame.player.job.salary /= 2;
-                btnGoToCollege.Text = "Drop Out";
-                mainScreen.UpdateFields();
+                mainScreen.mainGame.player.schoolMonths = 20;  //sets the number of months the player still needs
+                mainScreen.mainGame.player.job.salary /= 2; //halfs pay
+                btnGoToCollege.Text = "Drop Out";  //sets the option to drop out
+                mainScreen.UpdateFields();  //updates the main screen
                 return;
             }
-            else
+            else //player is in college
             {
-                mainScreen.mainGame.player.schoolMonths = 0;
-                mainScreen.mainGame.player.job.salary *= 2;
-                btnGoToCollege.Text = "Go To College";
-                mainScreen.UpdateFields();
+                mainScreen.mainGame.player.schoolMonths = 0;  //sets the number of months in college to 0
+                mainScreen.mainGame.player.job.salary *= 2;  //double pay
+                btnGoToCollege.Text = "Go To College";  //set option to go to college
+                mainScreen.UpdateFields();  //update main screen
                 return;
             }
         }
 
         private void OptionsMenu_Load(object sender, EventArgs e)
         {
-            if (mainScreen.mainGame.player.schoolMonths < 1)
+            if (mainScreen.mainGame.player.schoolMonths < 1)  //tells the player what the college options are
             {
                 btnGoToCollege.Text = "Go To College";
             }
