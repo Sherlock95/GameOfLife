@@ -48,7 +48,6 @@ namespace Living_Life
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-
             this.Enabled = false;
             LoadScreen loadGame = new LoadScreen(this);
             mainGame = new Main();
@@ -56,7 +55,6 @@ namespace Living_Life
         }
 
         //This is called from the load menu when it closes to let the main screen know that it should set fields.
-        //Also can be used to update the fields for each month.
         public void UpdateFields()
         {
             lblName.Text = "Name: " + mainGame.player.name;
@@ -124,13 +122,6 @@ namespace Living_Life
                     this.Close();
                     break;
             }
-        }
-
-        private void btnOptions_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            OptionsMenu options = new OptionsMenu(this);
-            options.Show();
         }
     }
 }
