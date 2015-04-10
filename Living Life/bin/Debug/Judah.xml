@@ -24,4 +24,9 @@
     <duration>0</duration>
     <insurance>0</insurance>
   </house>
+  <job>
+    <name>Fast Food</name>
+    <level>0</level>
+    <salary>1105</salary>
+  </job>
 </Player>

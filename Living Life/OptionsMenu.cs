@@ -29,17 +29,21 @@ namespace Living_Life
         private void btnGetJob_Click(object sender, EventArgs e)
         {
             //Should implement the ability to choose job, as I now realize that was the intent instead of random
-            Random rand = new Random();
-            int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
-            Job tmpJob =  mainScreen.mainGame.jobs[r];
-            Player tmpPlayer = mainScreen.mainGame.player;
-            if (tmpPlayer.educationLevel >= tmpJob.level)
-            {
-                mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
-            }
-            else { 
+            //Random rand = new Random();
+            //int r = rand.Next(0,mainScreen.mainGame.jobs.Length);
+            //Job tmpJob =  mainScreen.mainGame.jobs[r];
+            //Player tmpPlayer = mainScreen.mainGame.player;
+            //if (tmpPlayer.educationLevel >= tmpJob.level)
+            //{
+            //    mainScreen.mainGame.player.job = mainScreen.mainGame.jobs[r];
+            //}
+            //else { 
                 
-            }
+            //}
+
+            (new GetJob(this)).Show();
+            this.Enabled = false;
+
         }
 
         private void btnBuyHouse_Click(object sender, EventArgs e)

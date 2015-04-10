@@ -71,6 +71,12 @@
     <Compile Include="BuyHouse.Designer.cs">
       <DependentUpon>BuyHouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetJob.Designer.cs">
+      <DependentUpon>GetJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="Job.cs" />
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EndMonth.resx">
       <DependentUpon>EndMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetJob.resx">
+      <DependentUpon>GetJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
