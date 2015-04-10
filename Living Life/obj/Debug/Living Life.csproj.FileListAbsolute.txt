@@ -34,3 +34,5 @@ C:\Users\Mobile\Documents\GitHub\GameOfLife\Living Life\obj\Debug\Living Life.ex
 C:\Users\Mobile\Documents\GitHub\GameOfLife\Living Life\obj\Debug\Living Life.pdb
 C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living_Life.BuyHouse.resources
 C:\Users\Ergo\Documents\Visual Studio 2012\Projects\GameOfLife\Living Life\obj\Debug\Living_Life.BuyCar.resources
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living Life.exe
+C:\Users\Owner\OneDrive\GameOfLife\Living Life\obj\Debug\Living Life.pdb
