@@ -12,7 +12,7 @@ namespace Living_Life
         public struct randomEvent
         {
             public string description;
-            public double cost;
+            public int cost;
         };
 
         public Player player;
