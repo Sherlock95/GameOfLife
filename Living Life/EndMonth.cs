@@ -73,16 +73,17 @@ namespace Living_Life
 
         private void UpdateFields()
         {
-            Event randomEvent = GenerateEvent();
+            Event[] randomEvents = new Event[3];
             int earnings = 0;
             int expenses = 0;
 
             for (int i = 0; i < 3; i++)
             {
-                if (randomEvent.cost < 0)
-                    expenses += randomEvent.cost;
-                else if (randomEvent.cost > 0)
-                    earnings += randomEvent.cost;
+                randomEvents[i] = GenerateEvent();
+                if (randomEvents[i].cost < 0)
+                    expenses += randomEvents[i].cost;
+                else if (randomEvents[i].cost > 0)
+                    earnings += randomEvents[i].cost;
             }
 
             if (!(mainScreen.mainGame.player.house == null || mainScreen.mainGame.player.house.duration == 0))
