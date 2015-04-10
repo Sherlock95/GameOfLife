@@ -13,6 +13,7 @@ namespace Living_Life
     {
         public MainScreen mainScreen;
 
+        private Random generator;
         private bool continueCalled;
         private bool eventHappens;
 
@@ -33,12 +34,23 @@ namespace Living_Life
             InitializeComponent();
             this.mainScreen = mainScreen;
             continueCalled = false;
+            eventHappens = false;
+            UpdateFields();
+        }
+
+        public EndMonth(MainScreen mainScreen, Random generator)
+        {
+            InitializeComponent();
+            this.mainScreen = mainScreen;
+            this.generator = generator;
+            continueCalled = false;
+            eventHappens = false;
             UpdateFields();
         }
 
         private Event GenerateEvent()
         {
-            int eventNum = mainScreen.generator.Next(0, 11);
+            int eventNum = generator.Next(0, 11);
             Console.WriteLine(eventNum.ToString());
             //No Event
             if (eventNum < 4)
@@ -55,7 +67,7 @@ namespace Living_Life
             {
                 eventHappens = true;
                 Event randomEvent = new Event();
-                int index = mainScreen.generator.Next(0, mainScreen.mainGame.commonEvents.Length);
+                int index = generator.Next(0, mainScreen.mainGame.commonEvents.Length);
                 randomEvent.description = mainScreen.mainGame.commonEvents[index].description;
                 randomEvent.cost = mainScreen.mainGame.commonEvents[index].cost;
                 Console.WriteLine(index.ToString());
@@ -67,7 +79,7 @@ namespace Living_Life
             {
                 eventHappens = true;
                 Event randomEvent = new Event();
-                int index = mainScreen.generator.Next(0, mainScreen.mainGame.rareEvents.Length);
+                int index = generator.Next(0, mainScreen.mainGame.rareEvents.Length);
                 randomEvent.description = mainScreen.mainGame.rareEvents[index].description;
                 randomEvent.cost = mainScreen.mainGame.rareEvents[index].cost;
                 Console.WriteLine(index.ToString());
