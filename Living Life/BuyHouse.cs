@@ -59,10 +59,12 @@ namespace Living_Life
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
-        {
-
-         
-            if ((parentOptions.mainScreen.mainGame.player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
+        {            
+            if (lstHouses.SelectedItem == null)
+            {
+                MessageBox.Show("You must select a job or cancel");
+            }
+            else if ((parentOptions.mainScreen.mainGame.player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
             {
                 parentOptions.mainScreen.mainGame.player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
                 confirmBtnPressed = true;

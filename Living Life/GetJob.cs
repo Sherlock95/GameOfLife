@@ -66,8 +66,10 @@ namespace Living_Life
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-
-            if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)
+            if(lstJobs.SelectedItem==null){
+                MessageBox.Show("You must select a job or cancel");
+            }
+            else if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)
             {
 
                 Job newJob = new Job();
