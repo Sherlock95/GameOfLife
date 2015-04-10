@@ -12,17 +12,20 @@ namespace Living_Life
     public partial class OptionsMenu : Form
     {
         public MainScreen mainScreen;
+        public Player player;
+
         public OptionsMenu()
         {
             InitializeComponent();
-            if(mainScreen.mainGame.player.schoolMonths>0){
+            if(player.schoolMonths>0){
                 btnGoToCollege.Text = "Drop Out Of College";
             }
         }
-        public OptionsMenu(MainScreen mainScreen)
+        public OptionsMenu(MainScreen mainScreen, Player player)
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
+            this.player = player;
             this.TopMost = true;
         }
 
@@ -48,13 +51,13 @@ namespace Living_Life
 
         private void btnBuyHouse_Click(object sender, EventArgs e)
         {
-            (new BuyHouse(this)).Show();
+            (new BuyHouse(this, player)).Show();
             this.Enabled = false;
         }
 
         private void btnBuyCar_Click(object sender, EventArgs e)
         {
-            (new BuyCar(this)).Show();
+            (new BuyCar(this, player)).Show();
             this.Enabled = false;
         }
 
@@ -80,18 +83,18 @@ namespace Living_Life
 
         private void btnGoToCollege_Click(object sender, EventArgs e)
         {
-            if (mainScreen.mainGame.player.schoolMonths <= 0)
+            if (player.schoolMonths <= 0)
             {
-                mainScreen.mainGame.player.schoolMonths = 20;
-                mainScreen.mainGame.player.job.salary /= 2;
+                player.schoolMonths = 20;
+                player.job.salary /= 2;
                 btnGoToCollege.Text = "Drop Out";
                 mainScreen.UpdateFields();
                 return;
             }
             else
             {
-                mainScreen.mainGame.player.schoolMonths = 0;
-                mainScreen.mainGame.player.job.salary *= 2;
+                player.schoolMonths = 0;
+                player.job.salary *= 2;
                 btnGoToCollege.Text = "Go To College";
                 mainScreen.UpdateFields();
                 return;
@@ -100,7 +103,7 @@ namespace Living_Life
 
         private void OptionsMenu_Load(object sender, EventArgs e)
         {
-            if (mainScreen.mainGame.player.schoolMonths < 1)
+            if (player.schoolMonths < 1)
             {
                 btnGoToCollege.Text = "Go To College";
             }

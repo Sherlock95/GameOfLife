@@ -12,16 +12,18 @@ namespace Living_Life
     public partial class BuyHouse : Form
     {
         public OptionsMenu parentOptions;
+        public Player player;
 
         private bool cancelBtnPressed;
         private bool confirmBtnPressed;
 
-        public BuyHouse(OptionsMenu parentOptions)
+        public BuyHouse(OptionsMenu parentOptions, Player player)
         {
             InitializeComponent();
             confirmBtnPressed = false;
             cancelBtnPressed = false;
             this.parentOptions = parentOptions;
+            this.player = player;
             GetHouses();
             this.TopMost = true;
         }
@@ -62,12 +64,12 @@ namespace Living_Life
         {
 
          
-            if ((parentOptions.mainScreen.mainGame.player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
+            if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
             {
-                parentOptions.mainScreen.mainGame.player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
+                player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
                 confirmBtnPressed = true;
                 parentOptions.Enabled = true;
-                parentOptions.mainScreen.mainGame.player.house = parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]; //sets the new car
+                player.house = parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]; //sets the new car
                 parentOptions.mainScreen.UpdateFields();
                 this.Close();
             }
@@ -75,8 +77,6 @@ namespace Living_Life
             {
                 MessageBox.Show("You has not the monies");  
             }
-
-           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -84,7 +84,5 @@ namespace Living_Life
             cancelBtnPressed = true;
             this.Close();
         }
-
-      
     }
 }

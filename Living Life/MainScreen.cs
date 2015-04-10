@@ -18,6 +18,7 @@ namespace Living_Life
         public Main mainGame;
         public Random generator;
         public int monthsPassed;
+        public Player player;
 
         public MainScreen()
         {
@@ -29,6 +30,7 @@ namespace Living_Life
         public MainScreen(Player newPlayer)
         {
             InitializeComponent();
+            this.player = newPlayer;
             mainGame.player = newPlayer;
             generator = new Random();
             monthsPassed = 0;
@@ -169,7 +171,7 @@ namespace Living_Life
         private void btnOptions_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            OptionsMenu options = new OptionsMenu(this);
+            OptionsMenu options = new OptionsMenu(this, player);
             options.Show();
         }
     }
