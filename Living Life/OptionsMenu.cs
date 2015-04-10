@@ -26,7 +26,7 @@ namespace Living_Life
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
-            this.player = player;
+            this.player = mainScreen.mainGame.player;
             this.TopMost = true;
         }
 
