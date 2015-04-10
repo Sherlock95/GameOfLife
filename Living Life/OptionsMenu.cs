@@ -11,12 +11,17 @@ namespace Living_Life
 {
     public partial class OptionsMenu : Form
     {
+<<<<<<< HEAD
+=======
+        public MainScreen mainScreen;
+>>>>>>> 4abbd5aa9d4746c41f01ba63d6bbb21090e96415
 
         public MainScreen mainScreen;  //gets the main screen so we can get game info
         public Player player;  
         public OptionsMenu()
         {
             InitializeComponent();
+<<<<<<< HEAD
             if(mainScreen.mainGame.player.schoolMonths>0)  //checks to see if in college
             {
                 btnGoToCollege.Text = "Drop Out Of College";  //sets college button to tell player they are in college
@@ -28,11 +33,14 @@ namespace Living_Life
             InitializeComponent();
             if(player.schoolMonths>0)
             {
+=======
+            if(mainScreen.mainGame.player.schoolMonths>0){
+>>>>>>> 4abbd5aa9d4746c41f01ba63d6bbb21090e96415
                 btnGoToCollege.Text = "Drop Out Of College";
 
             }
         }
-        public OptionsMenu(MainScreen mainScreen, Player player)
+        public OptionsMenu(MainScreen mainScreen)
         {
             InitializeComponent();
 
@@ -40,7 +48,6 @@ namespace Living_Life
             this.TopMost = true;  //sets this to the top scree
 
             this.mainScreen = mainScreen;
-            this.player = player;
             this.TopMost = true;
 
         }
@@ -55,22 +62,30 @@ namespace Living_Life
 
         private void btnBuyHouse_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             (new BuyHouse(this)).Show();  //makes a buy house form
             this.Enabled = false;  //prevents user from messing with things while picking a house
 
             (new BuyHouse(this, player)).Show();
+=======
+            (new BuyHouse(this)).Show();
+>>>>>>> 4abbd5aa9d4746c41f01ba63d6bbb21090e96415
             this.Enabled = false;
 
         }
 
         private void btnBuyCar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             (new BuyCar(this)).Show();  //makes a buy car form
             this.Enabled = false; //prevents user from messing with things while picking a car
 
             (new BuyCar(this, player)).Show();
+=======
+            (new BuyCar(this)).Show();
+>>>>>>> 4abbd5aa9d4746c41f01ba63d6bbb21090e96415
             this.Enabled = false;
 
         }
@@ -96,6 +111,7 @@ namespace Living_Life
 
         private void btnGoToCollege_Click(object sender, EventArgs e)  //goes to or drops out of college
         {
+<<<<<<< HEAD
 
             if (mainScreen.mainGame.player.schoolMonths <= 0)  //checks to see if player is not in college
             {
@@ -105,9 +121,12 @@ namespace Living_Life
                 mainScreen.UpdateFields();  //updates the main screen
 
             if (player.schoolMonths <= 0)
+=======
+            if (mainScreen.mainGame.player.schoolMonths <= 0)
+>>>>>>> 4abbd5aa9d4746c41f01ba63d6bbb21090e96415
             {
-                player.schoolMonths = 20;
-                player.job.salary /= 2;
+                mainScreen.mainGame.player.schoolMonths = 20;
+                mainScreen.mainGame.player.job.salary /= 2;
                 btnGoToCollege.Text = "Drop Out";
                 mainScreen.UpdateFields();
 
@@ -115,6 +134,7 @@ namespace Living_Life
             }
             else //player is in college
             {
+<<<<<<< HEAD
 
                 mainScreen.mainGame.player.schoolMonths = 0;  //sets the number of months in college to 0
                 mainScreen.mainGame.player.job.salary *= 2;  //double pay
@@ -123,6 +143,10 @@ namespace Living_Life
 
                 player.schoolMonths = 0;
                 player.job.salary *= 2;
+=======
+                mainScreen.mainGame.player.schoolMonths = 0;
+                mainScreen.mainGame.player.job.salary *= 2;
+>>>>>>> 4abbd5aa9d4746c41f01ba63d6bbb21090e96415
                 btnGoToCollege.Text = "Go To College";
                 mainScreen.UpdateFields();
 
@@ -132,11 +156,15 @@ namespace Living_Life
 
         private void OptionsMenu_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             if (mainScreen.mainGame.player.schoolMonths < 1)  //tells the player what the college options are
 
             if (player.schoolMonths < 1)
 
+=======
+            if (mainScreen.mainGame.player.schoolMonths < 1)
+>>>>>>> 4abbd5aa9d4746c41f01ba63d6bbb21090e96415
             {
                 btnGoToCollege.Text = "Go To College";
             }
