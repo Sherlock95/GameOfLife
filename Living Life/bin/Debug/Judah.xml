@@ -17,7 +17,7 @@
     <insurance>0</insurance>
   </car>
   <house>
-    <name>Parent's House</name>
+    <name>Box</name>
     <totalValue>0</totalValue>
     <downPayment>0</downPayment>
     <monthlyPayment>0</monthlyPayment>
@@ -25,8 +25,8 @@
     <insurance>0</insurance>
   </house>
   <job>
-    <name>Fast Food</name>
+    <name>Lifeguard</name>
     <level>0</level>
-    <salary>1105</salary>
+    <salary>22496</salary>
   </job>
 </Player>

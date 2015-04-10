@@ -55,6 +55,7 @@
             this.picCar = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.lblSchool = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picHouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(12, 58);
+            this.lblName.Location = new System.Drawing.Point(12, 48);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(262, 20);
             this.lblName.TabIndex = 0;
@@ -76,7 +77,7 @@
             this.lblAge.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(12, 78);
+            this.lblAge.Location = new System.Drawing.Point(12, 68);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(262, 20);
             this.lblAge.TabIndex = 1;
@@ -88,7 +89,7 @@
             this.lblSavings.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSavings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSavings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSavings.Location = new System.Drawing.Point(12, 110);
+            this.lblSavings.Location = new System.Drawing.Point(12, 100);
             this.lblSavings.Name = "lblSavings";
             this.lblSavings.Size = new System.Drawing.Size(262, 20);
             this.lblSavings.TabIndex = 2;
@@ -100,7 +101,7 @@
             this.lblJob.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblJob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJob.Location = new System.Drawing.Point(12, 146);
+            this.lblJob.Location = new System.Drawing.Point(12, 134);
             this.lblJob.Name = "lblJob";
             this.lblJob.Size = new System.Drawing.Size(262, 20);
             this.lblJob.TabIndex = 3;
@@ -112,7 +113,7 @@
             this.lblSalary.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(12, 166);
+            this.lblSalary.Location = new System.Drawing.Point(12, 154);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(262, 20);
             this.lblSalary.TabIndex = 4;
@@ -124,7 +125,7 @@
             this.lblTithes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTithes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTithes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTithes.Location = new System.Drawing.Point(12, 186);
+            this.lblTithes.Location = new System.Drawing.Point(12, 174);
             this.lblTithes.Name = "lblTithes";
             this.lblTithes.Size = new System.Drawing.Size(262, 20);
             this.lblTithes.TabIndex = 5;
@@ -371,6 +372,18 @@
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
+            // lblSchool
+            // 
+            this.lblSchool.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSchool.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSchool.Location = new System.Drawing.Point(12, 207);
+            this.lblSchool.Name = "lblSchool";
+            this.lblSchool.Size = new System.Drawing.Size(262, 20);
+            this.lblSchool.TabIndex = 26;
+            this.lblSchool.Text = "College Status:  ";
+            this.lblSchool.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,6 +391,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(744, 532);
+            this.Controls.Add(this.lblSchool);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblCarBills);
@@ -443,6 +457,7 @@
         private System.Windows.Forms.PictureBox picCar;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Label lblSchool;
     }
 }
 

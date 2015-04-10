@@ -80,16 +80,34 @@ namespace Living_Life
 
         private void btnGoToCollege_Click(object sender, EventArgs e)
         {
-            if (btnGoToCollege.Text == "Drop Out Of College") {
-                mainScreen.mainGame.player.schoolMonths = 0;
-                mainScreen.mainGame.player.income *= 2;
-                btnGoToCollege.Text = "Go To College";
+            if (mainScreen.mainGame.player.schoolMonths <= 0)
+            {
+                mainScreen.mainGame.player.schoolMonths = 20;
+                mainScreen.mainGame.player.job.salary /= 2;
+                btnGoToCollege.Text = "Drop Out";
+                mainScreen.UpdateFields();
                 return;
             }
-            mainScreen.mainGame.player.schoolMonths = 20;
-            mainScreen.mainGame.player.income /=2;
-            btnGoToCollege.Text = "Drop Out Of College";
+            else
+            {
+                mainScreen.mainGame.player.schoolMonths = 0;
+                mainScreen.mainGame.player.job.salary *= 2;
+                btnGoToCollege.Text = "Go To College";
+                mainScreen.UpdateFields();
+                return;
+            }
+        }
 
+        private void OptionsMenu_Load(object sender, EventArgs e)
+        {
+            if (mainScreen.mainGame.player.schoolMonths < 1)
+            {
+                btnGoToCollege.Text = "Go To College";
+            }
+            else
+            {
+                btnGoToCollege.Text = "Drop Out";
+            }
         }
     }
 }
