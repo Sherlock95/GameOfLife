@@ -94,7 +94,6 @@
             // 
             // btnOther
             // 
-            this.btnOther.Enabled = false;
             this.btnOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOther.Location = new System.Drawing.Point(39, 298);
             this.btnOther.Name = "btnOther";
@@ -102,7 +101,6 @@
             this.btnOther.TabIndex = 5;
             this.btnOther.Text = "<Other option>";
             this.btnOther.UseVisualStyleBackColor = true;
-            this.btnOther.Visible = false;
             // 
             // chkChurch
             // 

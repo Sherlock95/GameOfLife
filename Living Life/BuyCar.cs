@@ -17,13 +17,13 @@ namespace Living_Life
         private bool cancelBtnPressed;
         private bool confirmBtnPressed;
 
-        public BuyCar(OptionsMenu parentOptions)
+        public BuyCar(OptionsMenu parentOptions, Player player)
         {
             InitializeComponent();
             cancelBtnPressed = false;
             confirmBtnPressed = false;
             this.parentOptions = parentOptions;
-            this.player = parentOptions.mainScreen.mainGame.player;
+            this.player = player;
             this.TopMost = true;
             getCars();
         }
@@ -60,7 +60,8 @@ namespace Living_Life
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-            if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex]) > parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex].downPayment))
+            if (lstCars.SelectedItem == null) MessageBox.Show("Chose a car");
+            else if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex]) > parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex].downPayment))
             {
                 player.savings -= parentOptions.mainScreen.mainGame.houses[lstCars.SelectedIndex].downPayment;
                 confirmBtnPressed = true;

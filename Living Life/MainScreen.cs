@@ -18,6 +18,7 @@ namespace Living_Life
         public Main mainGame;
         public Random generator;
         public int monthsPassed;
+        public Player player;
 
         public MainScreen()
         {
@@ -29,6 +30,7 @@ namespace Living_Life
         public MainScreen(Player newPlayer)
         {
             InitializeComponent();
+            this.player = newPlayer;
             mainGame.player = newPlayer;
             generator = new Random();
             monthsPassed = 0;
@@ -38,7 +40,7 @@ namespace Living_Life
         {
             this.Enabled = false;
             monthsPassed++;
-            (new EndMonth(this, generator)).Show();
+            (new EndMonth(this, generator, player)).Show();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -69,9 +71,10 @@ namespace Living_Life
             lblName.Text = "Name: " + mainGame.player.name;
             lblAge.Text = "Age: " + mainGame.player.age.ToString();
             lblSavings.Text = "Savings: " + mainGame.player.savings.ToString();
-            lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
-            lblTithes.Text = "Monthly Tithes: $" + (mainGame.player.income * 0.1).ToString();
-
+            if(player.tithe)
+             lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
+            else
+                lblCurrentTithes.Text = "Tithes: $0";
             if (mainGame.player.job != null)
             {
                 lblJob.Text = "Job: " + mainGame.player.job.name;
@@ -169,7 +172,7 @@ namespace Living_Life
         private void btnOptions_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            OptionsMenu options = new OptionsMenu(this);
+            OptionsMenu options = new OptionsMenu(this, player);
             options.Show();
         }
     }

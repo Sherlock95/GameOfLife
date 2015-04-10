@@ -39,12 +39,12 @@ namespace Living_Life
             UpdateFields();
         }
 
-        public EndMonth(MainScreen mainScreen, Random generator)
+        public EndMonth(MainScreen mainScreen, Random generator, Player player)
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
             this.generator = generator;
-            this.player = mainScreen.mainGame.player;
+            this.player = player;
             continueCalled = false;
             eventHappens = false;
             UpdateFields();

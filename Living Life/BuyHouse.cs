@@ -17,13 +17,13 @@ namespace Living_Life
         private bool cancelBtnPressed;
         private bool confirmBtnPressed;
 
-        public BuyHouse(OptionsMenu parentOptions)
+        public BuyHouse(OptionsMenu parentOptions, Player player)
         {
             InitializeComponent();
             confirmBtnPressed = false;
             cancelBtnPressed = false;
             this.parentOptions = parentOptions;
-            this.player = parentOptions.mainScreen.mainGame.player;
+            this.player = player;
             GetHouses();
             this.TopMost = true;
         }
@@ -63,8 +63,8 @@ namespace Living_Life
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-         
-            if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
+            if (lstHouses.SelectedItem == null)  MessageBox.Show("Chose a house"); 
+            else if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
             {
                 player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
                 confirmBtnPressed = true;

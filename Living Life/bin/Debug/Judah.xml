@@ -4,10 +4,10 @@
   <age>18</age>
   <wife>0</wife>
   <children>0</children>
-  <income>1821</income>
-  <savings>21818</savings>
+  <income>0</income>
+  <savings>100</savings>
   <educationLevel>0</educationLevel>
-  <schoolMonths>20</schoolMonths>
+  <schoolMonths>0</schoolMonths>
   <car>
     <name>Bus</name>
     <totalValue>0</totalValue>
@@ -27,6 +27,6 @@
   <job>
     <name>Truck Driver</name>
     <level>0</level>
-    <salary>2023</salary>
+    <salary>4046</salary>
   </job>
 </Player>

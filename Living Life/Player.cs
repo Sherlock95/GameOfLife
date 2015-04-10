@@ -18,6 +18,7 @@ namespace Living_Life
         public Property car;
         public Property house;
         public Job job;
+        public bool tithe;
 
         public Player()
         {
@@ -32,6 +33,7 @@ namespace Living_Life
             car = null;
             house = null;
             job = null;
+            tithe = false;
         }
 
         public Player(string name) //make new player
@@ -47,6 +49,7 @@ namespace Living_Life
             car = null;
             house = null;
             job = null;
+            tithe = false;
         }
 
         public Player(string Name, int Age, int Wife, int Children, int Income, int Savings, int EducationLevel, int SchoolMonths, Property Car, Property House, Job job) //remake existing player
@@ -62,6 +65,7 @@ namespace Living_Life
             car = Car;
             house = House;
             this.job = job;
+            tithe = false;
         }
 
     }

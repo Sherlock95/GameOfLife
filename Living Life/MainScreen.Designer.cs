@@ -34,7 +34,6 @@
             this.lblSavings = new System.Windows.Forms.Label();
             this.lblJob = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
-            this.lblTithes = new System.Windows.Forms.Label();
             this.lblMarriage = new System.Windows.Forms.Label();
             this.btnNextMonth = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
@@ -119,6 +118,7 @@
             this.lblSalary.Text = "Salary (per month):  ";
             this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+<<<<<<< HEAD
             // lblTithes
             // 
             this.lblTithes.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -131,6 +131,8 @@
             this.lblTithes.Text = "Monthly tithes:  ";
             this.lblTithes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+=======
+>>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
             // lblMarriage
             // 
             this.lblMarriage.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -398,7 +400,6 @@
             this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.btnNextMonth);
             this.Controls.Add(this.lblMarriage);
-            this.Controls.Add(this.lblTithes);
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.lblJob);
             this.Controls.Add(this.lblSavings);
@@ -422,7 +423,6 @@
         private System.Windows.Forms.Label lblSavings;
         private System.Windows.Forms.Label lblJob;
         private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.Label lblTithes;
         private System.Windows.Forms.Label lblMarriage;
         private System.Windows.Forms.Button btnNextMonth;
         private System.Windows.Forms.Button btnOptions;
