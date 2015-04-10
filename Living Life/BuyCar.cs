@@ -17,13 +17,13 @@ namespace Living_Life
         private bool cancelBtnPressed;
         private bool confirmBtnPressed;
 
-        public BuyCar(OptionsMenu parentOptions, Player player)
+        public BuyCar(OptionsMenu parentOptions)
         {
             InitializeComponent();
             cancelBtnPressed = false;
             confirmBtnPressed = false;
             this.parentOptions = parentOptions;
-            this.player = player;
+            this.player = parentOptions.mainScreen.mainGame.player;
             this.TopMost = true;
             getCars();
         }

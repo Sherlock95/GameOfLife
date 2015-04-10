@@ -352,20 +352,7 @@ namespace Living_Life
             {
                 Console.WriteLine("There was a problem reading an event file:");
                 Console.WriteLine(exception.Message);
-            }
-
-
-            //stuff used for debug purposes
-            //for (int j = 0; j < commonEvents.Length; j++)
-            //{
-            //    textBox1.Text += " " + commonEvents[j].description + " " + commonEvents[j].cost + " \n";
-            //}
-            //for (int j = 0; j < rareEvents.Length; j++)
-            //{
-            //    textBox1.Text += " " + rareEvents[j].description + " " + rareEvents[j].cost + " \n";
-            //}
-
-            
+            }            
         }
     }
 }

@@ -27,11 +27,11 @@ namespace Living_Life
             monthsPassed = 0;
         }
 
-        public MainScreen(Player newPlayer)
+        public MainScreen(Player player)
         {
             InitializeComponent();
-            this.player = newPlayer;
-            mainGame.player = newPlayer;
+            mainGame.player = player;
+            this.player = mainGame.player;
             generator = new Random();
             monthsPassed = 0;
         }
@@ -71,14 +71,12 @@ namespace Living_Life
             lblName.Text = "Name: " + mainGame.player.name;
             lblAge.Text = "Age: " + mainGame.player.age.ToString();
             lblSavings.Text = "Savings: " + mainGame.player.savings.ToString();
-<<<<<<< HEAD
-            if(player.tithe)
-=======
+
             if(mainGame.player.tithe)
->>>>>>> e2d85565f5f5e0a845126180898ca7d8a5ef6c6a
-             lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
+                lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
             else
                 lblCurrentTithes.Text = "Tithes: $0";
+
             if (mainGame.player.job != null)
             {
                 lblJob.Text = "Job: " + mainGame.player.job.name;

@@ -23,10 +23,10 @@ namespace Living_Life
             InitializeComponent();
         }
 
-        public LoadScreen(MainScreen mainScreen0)
+        public LoadScreen(MainScreen mainScreen)
         {
             InitializeComponent();
-            mainScreen = mainScreen0;
+            this.mainScreen = mainScreen;
             this.TopMost = true;
         }
 
@@ -54,7 +54,6 @@ namespace Living_Life
             }
         }
 
-        // NOTE: WE MAY WANT TO LOOK INTO SAVING AND LOADING THE OBJECTS USING XML FILES. IT SEEMS TO BE AN EASIER METHOD THAN USING TEXT.
         private void btnNew_Click(object sender, EventArgs e)
         {
             bool playerExists = false;
@@ -108,33 +107,6 @@ namespace Living_Life
                 Console.WriteLine("There was a problem creating the player save file.");
                 Console.WriteLine(ex.Message);
             }
-
-            //Keeping around just in case
-            //save new file
-            //try
-            //{
-            //    using (StreamWriter sw = new StreamWriter(txtNewName.Text + ".txt"))
-            //    {
-
-            //        sw.Write(""); //clear a possibly existing file
-            //        sw.WriteLine(txtNewName.Text); //Name
-            //        sw.WriteLine("18"); //age
-            //        sw.WriteLine("0"); //wife
-            //        sw.WriteLine("0"); //children
-            //        sw.WriteLine("0"); //income
-            //        sw.WriteLine("0"); //savings
-            //        sw.WriteLine("0"); //education level
-            //        sw.WriteLine("0"); //school months
-            //        sw.WriteLine("none"); //car
-            //        sw.WriteLine("none"); //house
-
-            //    }
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine("There was a problem writing to the save file:");
-            //    Console.WriteLine(exception.Message);
-            //}
 
             gameCalled = true;
             mainScreen.Enabled = true;
