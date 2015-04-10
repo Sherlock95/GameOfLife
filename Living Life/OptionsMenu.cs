@@ -11,27 +11,6 @@ namespace Living_Life
 {
     public partial class OptionsMenu : Form
     {
-<<<<<<< HEAD
-        public MainScreen mainScreen;  //gets the main screen so we can get game info
-        public Player player;  
-        public OptionsMenu()
-        {
-            InitializeComponent();
-
-            if(mainScreen.mainGame.player.schoolMonths>0)  //checks to see if in college
-            {
-                btnGoToCollege.Text = "Drop Out Of College";  //sets college button to tell player they are in college
-            }
-        }
-
-        public OptionsMenu(MainScreen mainScreen)
-        {
-            InitializeComponent();
-
-            this.mainScreen = mainScreen;  //sets mainscreen so we can have game stuffs
-            this.TopMost = true;  //sets this to the top scree
-            this.player = mainScreen.mainGame.player;
-=======
         public MainScreen mainScreen;
         public Player player;
 
@@ -48,7 +27,6 @@ namespace Living_Life
             this.mainScreen = mainScreen;
             this.player = player;
             this.TopMost = true;
->>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
         }
 
         private void btnGetJob_Click(object sender, EventArgs e)
@@ -73,24 +51,14 @@ namespace Living_Life
 
         private void btnBuyHouse_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            (new BuyHouse(this)).Show();  //makes a buy house form
-            this.Enabled = false;  //prevents user from messing with things while picking a house
-=======
             (new BuyHouse(this, player)).Show();
             this.Enabled = false;
->>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
         }
 
         private void btnBuyCar_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            (new BuyCar(this)).Show();  //makes a buy car form
-            this.Enabled = false; //prevents user from messing with things while picking a car
-=======
             (new BuyCar(this, player)).Show();
             this.Enabled = false;
->>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -118,53 +86,27 @@ namespace Living_Life
 
         private void btnGoToCollege_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            if (mainScreen.mainGame.player.schoolMonths <= 0)  //checks to see if player is not in college
-            {
-                mainScreen.mainGame.player.schoolMonths = 20;  //sets the number of months the player still needs
-                mainScreen.mainGame.player.job.salary /= 2; //halfs pay
-                btnGoToCollege.Text = "Drop Out";  //sets the option to drop out
-                mainScreen.UpdateFields();  //updates the main screen
-=======
             if (player.schoolMonths <= 0)
             {
                 player.schoolMonths = 20;
                 player.job.salary /= 2;
                 btnGoToCollege.Text = "Drop Out";
                 mainScreen.UpdateFields();
->>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
                 return;
             }
             else
             {
-<<<<<<< HEAD
-                mainScreen.mainGame.player.schoolMonths = 0;  //sets the number of months in college to 0
-                mainScreen.mainGame.player.job.salary *= 2;  //double pay
-                btnGoToCollege.Text = "Go To College";  //set option to go to college
-                mainScreen.UpdateFields();  //update main screen
-
-                player.schoolMonths = 0;
-                player.job.salary *= 2;
-
-=======
                 player.schoolMonths = 0;
                 player.job.salary *= 2;
                 btnGoToCollege.Text = "Go To College";
                 mainScreen.UpdateFields();
->>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
                 return;
             }
         }
 
         private void OptionsMenu_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-
-
-            if (player.schoolMonths < 1)  //tells the player what the college options are
-=======
             if (player.schoolMonths < 1)
->>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
             {
                 btnGoToCollege.Text = "Go To College";
             }
