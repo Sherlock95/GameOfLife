@@ -119,6 +119,7 @@
             this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             // lblTithes
@@ -136,6 +137,11 @@
 =======
 >>>>>>> 3e62086d20658d176a6344db965f2fd3d80658ea
 >>>>>>> e2d85565f5f5e0a845126180898ca7d8a5ef6c6a
+=======
+
+
+
+>>>>>>> 24999df7c804a7e386d75b7cef66cfc40be8a698
             // lblMarriage
             // 
             this.lblMarriage.Anchor = System.Windows.Forms.AnchorStyles.Top;
