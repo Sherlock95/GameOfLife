@@ -67,7 +67,8 @@ namespace Living_Life
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-            if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)  //check to see if the player is educated enough
+            if (lstJobs.SelectedItem == null) MessageBox.Show("Chose a house");
+            else if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)  //check to see if the player is educated enough
             {
 
                 Job newJob = new Job();  //make a new job based on a job in the list of jobs

@@ -39,12 +39,12 @@ namespace Living_Life
             UpdateFields();
         }
 
-        public EndMonth(MainScreen mainScreen, Random generator)
+        public EndMonth(MainScreen mainScreen, Random generator, Player player)
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
             this.generator = generator;
-            this.player = mainScreen.mainGame.player;
+            this.player = player;
             continueCalled = false;
             eventHappens = false;
             UpdateFields();
@@ -149,6 +149,11 @@ namespace Living_Life
                     player.educationLevel++;
                     player.job.salary *= 2;
                 }
+            }
+
+            if (player.wife == 1)
+            {
+                //Pregnancy stuff goes here, yo.
             }
         }
 

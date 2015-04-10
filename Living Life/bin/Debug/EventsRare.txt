@@ -3,7 +3,7 @@ Raise
 Inheritance
 10000
 Lottery
-5000
+5
 Fired
 -1500
 Car Accident-Your Fault
