@@ -80,9 +80,12 @@ namespace Living_Life
         private void btnContinue_Click(object sender, EventArgs e)
         {
             mainScreen.Enabled = true;
-            if (chkChurch.Checked) {
+            if (chkChurch.Checked)
+            {
                 player.tithe = true;
             }
+            else
+                player.tithe = false;
             this.Close();
         }
 
@@ -116,6 +119,8 @@ namespace Living_Life
             {
                 btnGoToCollege.Text = "Drop Out";
             }
+            if (player.tithe)
+                chkChurch.Select();
         }
     }
 }

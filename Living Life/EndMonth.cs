@@ -126,9 +126,11 @@ namespace Living_Life
                 player.car.duration--;
             }
 
-            player.income = ((player.job != null) ?  player.job.salary - (player.job.salary*10)/100 : 0);
-            earnings += player.income;
-
+            //player.income = ((player.job != null) ?  player.income- (player.income*10)/100 : 0);
+            if (player.tithe)
+                earnings += (player.income - (player.income * 10) / 100);
+            else
+                earnings += player.income;
             lblEarningsSummary.Text = earnings.ToString();
             lblTotalExpenses.Text = expenses.ToString();
 
