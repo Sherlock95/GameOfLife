@@ -158,7 +158,7 @@ namespace Living_Life
                     Job newJob = new Job();
                     newJob.level = player.job.level;
                     newJob.name = player.job.name;
-                    newJob.salary = player.job.salary * 2;
+                    player.income = player.income*2;
                     player.job = newJob;
                 }
             }

@@ -70,18 +70,19 @@ namespace Living_Life
             else if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)  //check to see if the player is educated enough
             {
 
-
+                Job newJob = new Job();
+                newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;
+                newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;
+                newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;
+                parentOptions.mainScreen.mainGame.player.income = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
+                parentOptions.mainScreen.mainGame.player.job = newJob;
                 if (parentOptions.mainScreen.mainGame.player.schoolMonths > 0)
                 {
-                    Job newJob = new Job();
-                    newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;
-                    newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;
-                    newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
-                    parentOptions.mainScreen.mainGame.player.job = newJob;
+                    parentOptions.mainScreen.mainGame.player.income = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
                 }
                 else
                 {
-                    parentOptions.mainScreen.mainGame.player.job = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex];
+                    parentOptions.mainScreen.mainGame.player.income = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;
                 }
 
                 confirmBtnPressed = true;

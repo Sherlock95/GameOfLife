@@ -97,8 +97,16 @@ namespace Living_Life
             if (mainGame.player.car != null)
             {
                 lblCar.Text = "Car: " + mainGame.player.car.name;
-                lblCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment;
-                lblCurrentCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment;
+                if (mainGame.player.car.duration > 0)
+                {
+                    lblCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment + " For: " + mainGame.player.car.duration + " months";
+                    lblCurrentCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment + " For: " + mainGame.player.car.duration + " months";
+                }
+                else
+                {
+                    lblCarBills.Text = "Car Bills: 0";
+                    lblCurrentCarBills.Text = "Car Bills: 0";
+                }
                 picCar.Image = Image.FromFile(mainGame.player.car.name + ".jpg");
                 // What is the difference between car bills and monthly car bills????
                 //I don't knooooooooooooooowwwwwwwww!!!!!!!!!
@@ -115,9 +123,17 @@ namespace Living_Life
             if (mainGame.player.house != null)
             {
                 lblHouse.Text = "House:  " + mainGame.player.house.name;
-                lblHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment;
-                lblCurrentHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment;
-                picHouse.Image = Image.FromFile(mainGame.player.house.name + ".jpg");
+                if (mainGame.player.house.duration > 0)
+                {
+                    lblHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment + " For: " + mainGame.player.house.duration + " months";
+                    lblCurrentHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment + " For: " + mainGame.player.house.duration + " months";
+                }
+                else {
+                    lblHouseBills.Text = "House Bills: 0";
+                    lblCurrentHouseBills.Text = "House Bills: 0";
+                }
+               picHouse.Image = Image.FromFile(mainGame.player.house.name + ".jpg");
+               
             }
             else
             {
