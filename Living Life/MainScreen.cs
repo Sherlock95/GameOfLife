@@ -64,7 +64,7 @@ namespace Living_Life
 
             this.Enabled = false;
             LoadScreen loadGame = new LoadScreen(this);
-            
+
             loadGame.Show();
         }
 
@@ -84,7 +84,7 @@ namespace Living_Life
             if (mainGame.player.job != null)
             {
                 lblJob.Text = "Job: " + mainGame.player.job.name;
-                lblSalary.Text = "Salary (Per Month): " + mainGame.player.job.salary;
+                lblSalary.Text = "Salary (Per Month): " + mainGame.player.income;
                 lblCurrentSalary.Text = "Salary: " + mainGame.player.job.salary;
             }
             else 
@@ -108,6 +108,7 @@ namespace Living_Life
                 lblCar.Text = "Car: None";
                 lblCarBills.Text = "Car Bills (Monthly): None";
                 lblCurrentCarBills.Text = "Car Bills:  None";
+                picCar.Image= null;
                 
             }
 
@@ -123,6 +124,7 @@ namespace Living_Life
                 lblHouse.Text = "House:  None";
                 lblHouseBills.Text = "House Bills: None";
                 lblCurrentHouseBills.Text = "House Bills:  None";
+                picHouse.Image=null;
             }
 
 
