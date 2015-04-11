@@ -44,7 +44,7 @@
             this.lstFiles.Name = "lstFiles";
             this.lstFiles.Size = new System.Drawing.Size(260, 121);
             this.lstFiles.TabIndex = 0;
-            this.lstFiles.Click += new System.EventHandler(this.lstFiles_Click);
+            this.lstFiles.SelectedIndexChanged += new System.EventHandler(this.lstFiles_SelectedIndexChanged);
             // 
             // lblPrompt
             // 

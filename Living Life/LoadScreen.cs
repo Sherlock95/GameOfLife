@@ -116,11 +116,6 @@ namespace Living_Life
 
         }
 
-        private void lstFiles_Click(object sender, EventArgs e)
-        {
-            btnLoad.Enabled = true;
-        }
-
         private void txtNewName_TextChanged(object sender, EventArgs e)
         {
             if (txtNewName.Text != "")
@@ -180,6 +175,14 @@ namespace Living_Life
             mainScreen.Enabled = true;
             mainScreen.UpdateFields();
             this.Close();
+        }
+
+        private void lstFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstFiles.SelectedIndex > -1)
+            {
+                btnLoad.Enabled = true;
+            }
         }
     }
 }

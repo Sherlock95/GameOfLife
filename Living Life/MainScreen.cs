@@ -23,13 +23,16 @@ namespace Living_Life
         public MainScreen()
         {
             InitializeComponent();
+            mainGame = new Main();
             generator = new Random();
+            player = mainGame.player;
             monthsPassed = 0;
         }
 
         public MainScreen(Player player)
         {
             InitializeComponent();
+            mainGame = new Main();
             mainGame.player = player;
             this.player = mainGame.player;
             generator = new Random();
@@ -40,6 +43,7 @@ namespace Living_Life
         {
             this.Enabled = false;
             monthsPassed++;
+            player = mainGame.player;
             (new EndMonth(this, generator, player)).Show();
         }
 
@@ -60,7 +64,7 @@ namespace Living_Life
 
             this.Enabled = false;
             LoadScreen loadGame = new LoadScreen(this);
-            mainGame = new Main();
+            
             loadGame.Show();
         }
 
@@ -140,6 +144,34 @@ namespace Living_Life
                 lblSchool.Text = "College Status:  Not In College";
             }
 
+            //detect end game
+            if (mainGame.player.savings < 0)
+            {
+                //game over
+                //lose
+
+                MessageBox.Show("You ran out of money");
+                MessageBox.Show("You Lose");
+                this.Enabled = false;
+                LoadScreen loadGame = new LoadScreen(this);
+
+                loadGame.Show();
+
+            }
+            if (mainGame.player.age >= 50)
+            {
+                //game over
+                //win
+
+                MessageBox.Show("You Made it to age 50!");
+                MessageBox.Show("You Win!");
+                this.Enabled = false;
+                LoadScreen loadGame = new LoadScreen(this);
+
+                loadGame.Show();
+
+            }
+
         }
 
         // Save Game and Exit
@@ -176,6 +208,12 @@ namespace Living_Life
             this.Enabled = false;
             OptionsMenu options = new OptionsMenu(this, player);
             options.Show();
+        }
+
+        private void lblCheat_Click(object sender, EventArgs e)
+        {
+            mainGame.player.savings += 10000;
+            UpdateFields();
         }
     }
 }
