@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Player xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <name>Marcus</name>
-  <age>18</age>
+  <age>23</age>
   <wife>0</wife>
   <children>0</children>
-  <income>0</income>
-  <savings>100</savings>
-  <educationLevel>0</educationLevel>
+  <income>7000</income>
+  <savings>34100</savings>
+  <educationLevel>3</educationLevel>
   <schoolMonths>0</schoolMonths>
+  <car>
+    <name>Motorcycle</name>
+    <totalValue>7000</totalValue>
+    <downPayment>1400</downPayment>
+    <monthlyPayment>120</monthlyPayment>
+    <duration>24</duration>
+    <insurance>70</insurance>
+  </car>
+  <house>
+    <name>2 Apt.</name>
+    <totalValue>0</totalValue>
+    <downPayment>800</downPayment>
+    <monthlyPayment>800</monthlyPayment>
+    <duration>8</duration>
+    <insurance>0</insurance>
+  </house>
+  <job>
+    <name>Finance Manager</name>
+    <level>3</level>
+    <salary>7000</salary>
+  </job>
   <tithe>false</tithe>
 </Player>

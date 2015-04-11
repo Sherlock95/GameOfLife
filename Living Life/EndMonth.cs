@@ -108,11 +108,11 @@ namespace Living_Life
             }
 
             lblEventTitle1.Text = randomEvents[0].description;
-            lblEventDescription1.Text = "This event costed: $" + randomEvents[0].cost.ToString();
+            lblEventDescription1.Text = "This event cost: $" + randomEvents[0].cost.ToString();
             lblEventTitle2.Text = randomEvents[1].description;
-            lblEventDescription2.Text = "This event costed: $" + randomEvents[1].cost.ToString();
+            lblEventDescription2.Text = "This event cost: $" + randomEvents[1].cost.ToString();
             lblEventTitle3.Text = randomEvents[2].description;
-            lblEventDescription3.Text = "This event costed: $" + randomEvents[2].cost.ToString();
+            lblEventDescription3.Text = "This event cost: $" + randomEvents[2].cost.ToString();
             if(player.house!=null){
                 expenses -= player.house.insurance;
             }
