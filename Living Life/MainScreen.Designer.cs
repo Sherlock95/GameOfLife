@@ -54,6 +54,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lblSchool = new System.Windows.Forms.Label();
+            this.lblCheat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picHouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
             this.SuspendLayout();
@@ -358,6 +359,14 @@
             this.lblSchool.Text = "College Status:  ";
             this.lblSchool.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblCheat
+            // 
+            this.lblCheat.Location = new System.Drawing.Point(710, -1);
+            this.lblCheat.Name = "lblCheat";
+            this.lblCheat.Size = new System.Drawing.Size(36, 23);
+            this.lblCheat.TabIndex = 27;
+            this.lblCheat.Click += new System.EventHandler(this.lblCheat_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +374,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(744, 532);
+            this.Controls.Add(this.lblCheat);
             this.Controls.Add(this.lblSchool);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSave);
@@ -428,6 +438,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lblSchool;
+        private System.Windows.Forms.Label lblCheat;
     }
 }
 

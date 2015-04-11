@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Player xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <name>Judah</name>
-  <age>20</age>
+  <age>18</age>
   <wife>0</wife>
   <children>0</children>
-<<<<<<< HEAD
-  <income>1575</income>
-  <savings>15093</savings>
-  <educationLevel>2</educationLevel>
-  <schoolMonths>20</schoolMonths>
-=======
-  <income>0</income>
-  <savings>100</savings>
+  <income>1821</income>
+  <savings>1171</savings>
   <educationLevel>0</educationLevel>
-  <schoolMonths>0</schoolMonths>
->>>>>>> e2d85565f5f5e0a845126180898ca7d8a5ef6c6a
+  <schoolMonths>19</schoolMonths>
   <car>
     <name>Bus</name>
     <totalValue>0</totalValue>
@@ -32,14 +25,9 @@
     <insurance>0</insurance>
   </house>
   <job>
-<<<<<<< HEAD
-    <name>Engineer</name>
-    <level>2</level>
-    <salary>2750</salary>
-=======
     <name>Truck Driver</name>
     <level>0</level>
-    <salary>4046</salary>
->>>>>>> e2d85565f5f5e0a845126180898ca7d8a5ef6c6a
+    <salary>2023</salary>
   </job>
+  <tithe>false</tithe>
 </Player>
