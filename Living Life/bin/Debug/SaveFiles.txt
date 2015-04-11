@@ -1,8 +1,3 @@
 jarrett
-<<<<<<< HEAD
 Judah
 Marcus
-=======
-JudahMarcus
-Marcus
->>>>>>> 41e307838fec2c7cd502553788e77eb20330e610
