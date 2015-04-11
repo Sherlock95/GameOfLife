@@ -66,20 +66,17 @@ namespace Living_Life
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-
-            if (lstJobs.SelectedItem == null) MessageBox.Show("Chose a house");
+            if (lstJobs.SelectedItem == null) MessageBox.Show("Chose a job");
             else if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)  //check to see if the player is educated enough
             {
-
-                Job newJob = new Job();  //make a new job based on a job in the list of jobs
-                newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;  //this seems unnecessary, but we were having pointer issues
-                newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;  //by making a new job based off of an old one we can get around the pointer issues
-                newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;  //it just works this way
-                if (parentOptions.mainScreen.mainGame.player.schoolMonths > 0)  //check to see if the player is in college
+                Job newJob = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex];
+                Player playerPoint = parentOptions.mainScreen.mainGame.player;
+                playerPoint.income= newJob.salary;  //it just works this way
+                if (playerPoint.schoolMonths > 0)  //check to see if the player is in college
                 {
-                    newJob.salary /= 2;  //half the salary if in college
+                    playerPoint.income /= 2;  //half the salary if in college
                 }
-                parentOptions.mainScreen.mainGame.player.job = newJob; //sets new job
+                playerPoint.job = newJob; //sets new job
                 confirmBtnPressed = true;
                 parentOptions.Enabled = true;
                 parentOptions.mainScreen.UpdateFields();

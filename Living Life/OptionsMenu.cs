@@ -91,7 +91,7 @@ namespace Living_Life
             if (player.schoolMonths <= 0)
             {
                 player.schoolMonths = 20;
-                player.job.salary /= 2;
+                player.income /= 2;
                 btnGoToCollege.Text = "Drop Out";
                 mainScreen.UpdateFields();
                 return;
@@ -99,7 +99,7 @@ namespace Living_Life
             else
             {
                 player.schoolMonths = 0;
-                player.job.salary *= 2;
+                player.income *= 2;
                 btnGoToCollege.Text = "Go To College";
                 mainScreen.UpdateFields();
                 return;

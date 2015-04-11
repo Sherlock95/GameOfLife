@@ -44,7 +44,7 @@ namespace Living_Life
             InitializeComponent();
             this.mainScreen = mainScreen;
             this.generator = generator;
-            this.player = player;
+            this.player = mainScreen.mainGame.player;
             continueCalled = false;
             eventHappens = false;
             UpdateFields();
