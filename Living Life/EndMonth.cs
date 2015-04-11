@@ -155,7 +155,11 @@ namespace Living_Life
                 if (player.schoolMonths == 0)
                 {
                     player.educationLevel++;
-                    player.job.salary *= 2;
+                    Job newJob = new Job();
+                    newJob.level = player.job.level;
+                    newJob.name = player.job.name;
+                    newJob.salary = player.job.salary * 2;
+                    player.job = newJob;
                 }
             }
 

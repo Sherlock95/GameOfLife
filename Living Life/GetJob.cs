@@ -69,14 +69,21 @@ namespace Living_Life
             if (lstJobs.SelectedItem == null) MessageBox.Show("Chose a job");
             else if (parentOptions.mainScreen.mainGame.player.educationLevel >= parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level)  //check to see if the player is educated enough
             {
-                Job newJob = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex];
-                Player playerPoint = parentOptions.mainScreen.mainGame.player;
-                playerPoint.income= newJob.salary;  //it just works this way
-                if (playerPoint.schoolMonths > 0)  //check to see if the player is in college
+
+
+                if (parentOptions.mainScreen.mainGame.player.schoolMonths > 0)
                 {
-                    playerPoint.income /= 2;  //half the salary if in college
+                    Job newJob = new Job();
+                    newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;
+                    newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;
+                    newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
+                    parentOptions.mainScreen.mainGame.player.job = newJob;
                 }
-                playerPoint.job = newJob; //sets new job
+                else
+                {
+                    parentOptions.mainScreen.mainGame.player.job = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex];
+                }
+
                 confirmBtnPressed = true;
                 parentOptions.Enabled = true;
                 parentOptions.mainScreen.UpdateFields();
