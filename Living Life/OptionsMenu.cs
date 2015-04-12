@@ -126,7 +126,7 @@ namespace Living_Life
                 btnGoToCollege.Text = "Drop Out";
             }
             if (player.tithe)
-                chkChurch.Select();
+                chkChurch.Checked=true;
         }
     }
 }

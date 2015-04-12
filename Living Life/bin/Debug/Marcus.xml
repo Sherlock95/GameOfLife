@@ -4,8 +4,8 @@
   <age>25</age>
   <wife>0</wife>
   <children>0</children>
-  <income>14000</income>
-  <savings>168325</savings>
+  <income>29149</income>
+  <savings>72478</savings>
   <educationLevel>4</educationLevel>
   <schoolMonths>0</schoolMonths>
   <car>
@@ -17,12 +17,12 @@
     <insurance>70</insurance>
   </car>
   <house>
-    <name>Duplex (2 bedrooms)</name>
-    <totalValue>0</totalValue>
-    <downPayment>950</downPayment>
-    <monthlyPayment>950</monthlyPayment>
-    <duration>0</duration>
-    <insurance>0</insurance>
+    <name>6 bedroom house</name>
+    <totalValue>800000</totalValue>
+    <downPayment>160000</downPayment>
+    <monthlyPayment>2200</monthlyPayment>
+    <duration>356</duration>
+    <insurance>650</insurance>
   </house>
   <job>
     <name>Surgeon</name>
