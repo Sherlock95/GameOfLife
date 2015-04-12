@@ -81,14 +81,14 @@ namespace Living_Life
             lblSavings.Text = "Savings: " + mainGame.player.savings.ToString();
 
             if(mainGame.player.tithe)
-                lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.job.salary * 0.1).ToString();
+                lblCurrentTithes.Text = "Tithes: $" + (mainGame.player.income * 0.1).ToString();
             else
                 lblCurrentTithes.Text = "Tithes: $0";
 
             if (mainGame.player.job != null)
             {
                 lblJob.Text = "Job: " + mainGame.player.job.name;
-                lblSalary.Text = "Salary (Per Month): " + mainGame.player.job.salary;
+                lblSalary.Text = "Salary (Per Month): " + mainGame.player.income;
                 lblCurrentSalary.Text = "Salary: " + mainGame.player.job.salary;
             }
             else 

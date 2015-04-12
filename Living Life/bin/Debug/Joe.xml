@@ -4,9 +4,30 @@
   <age>18</age>
   <wife>0</wife>
   <children>0</children>
-  <income>0</income>
-  <savings>100</savings>
+  <income>4046</income>
+  <savings>6949</savings>
   <educationLevel>0</educationLevel>
-  <schoolMonths>0</schoolMonths>
-  <tithe>false</tithe>
+  <schoolMonths>18</schoolMonths>
+  <car>
+    <name>Bike</name>
+    <totalValue>300</totalValue>
+    <downPayment>0</downPayment>
+    <monthlyPayment>0</monthlyPayment>
+    <duration>0</duration>
+    <insurance>0</insurance>
+  </car>
+  <house>
+    <name>Parent's House</name>
+    <totalValue>0</totalValue>
+    <downPayment>0</downPayment>
+    <monthlyPayment>0</monthlyPayment>
+    <duration>0</duration>
+    <insurance>0</insurance>
+  </house>
+  <job>
+    <name>Truck Driver</name>
+    <level>0</level>
+    <salary>2023</salary>
+  </job>
+  <tithe>true</tithe>
 </Player>
