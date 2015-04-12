@@ -74,15 +74,18 @@ namespace Living_Life
                 newJob.level = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].level;
                 newJob.name = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].name;
                 newJob.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;
-                parentOptions.mainScreen.mainGame.player.income = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
-                parentOptions.mainScreen.mainGame.player.job = newJob;
+                parentOptions.mainScreen.mainGame.player.job = newJob; //something that is necessary
                 if (parentOptions.mainScreen.mainGame.player.schoolMonths > 0)
                 {
-                    parentOptions.mainScreen.mainGame.player.income = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
+                    //someone keeps changing this to parentOptions.mainScreen.mainGame.player.income
+                    //it needs to stop
+                    //it needs to be player.job.salary
+                    //income is not used here
+                    parentOptions.mainScreen.mainGame.player.job.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
                 }
                 else
                 {
-                    parentOptions.mainScreen.mainGame.player.income = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;
+                    parentOptions.mainScreen.mainGame.player.job.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary;
                 }
 
                 confirmBtnPressed = true;
