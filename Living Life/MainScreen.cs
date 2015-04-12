@@ -19,6 +19,8 @@ namespace Living_Life
         public Random generator;
         public int monthsPassed;
         public Player player;
+        public OptionsMenu options;
+
 
         public MainScreen()
         {
@@ -66,6 +68,8 @@ namespace Living_Life
             LoadScreen loadGame = new LoadScreen(this);
 
             loadGame.Show();
+
+            
         }
 
         //This is called from the load menu when it closes to let the main screen know that it should set fields.
@@ -170,6 +174,7 @@ namespace Living_Life
 
                 MessageBox.Show("You ran out of money");
                 MessageBox.Show("You Lose");
+                options.Close();
                 this.Enabled = false;
                 LoadScreen loadGame = new LoadScreen(this);
 
@@ -224,7 +229,7 @@ namespace Living_Life
         private void btnOptions_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            OptionsMenu options = new OptionsMenu(this, player);
+            options = new OptionsMenu(this, player);
             options.Show();
         }
 

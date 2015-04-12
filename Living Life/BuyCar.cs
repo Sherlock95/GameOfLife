@@ -61,9 +61,9 @@ namespace Living_Life
         {
 
             if (lstCars.SelectedItem == null) MessageBox.Show("Chose a car");
-            else if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex]) > parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex].downPayment))
+            else if ((player.savings  > parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex].downPayment))
             {
-                player.savings -= parentOptions.mainScreen.mainGame.houses[lstCars.SelectedIndex].downPayment;
+                player.savings -= parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex].downPayment;
                 confirmBtnPressed = true;
                 parentOptions.Enabled = true;
                 player.car = parentOptions.mainScreen.mainGame.cars[lstCars.SelectedIndex]; //sets the new car

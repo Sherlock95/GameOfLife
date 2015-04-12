@@ -64,7 +64,7 @@ namespace Living_Life
         {
 
             if (lstHouses.SelectedItem == null)  MessageBox.Show("Chose a house"); 
-            else if ((player.savings + parentOptions.mainScreen.mainGame.calculateValue(parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex]) > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
+            else if ((player.savings > parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment))
             {
                 player.savings -= parentOptions.mainScreen.mainGame.houses[lstHouses.SelectedIndex].downPayment;
                 confirmBtnPressed = true;
