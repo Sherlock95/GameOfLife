@@ -81,6 +81,7 @@ namespace Living_Life
                     //it needs to stop
                     //it needs to be player.job.salary
                     //income is not used here
+                    //either someone keeps changing it or git keeps messing it up
                     parentOptions.mainScreen.mainGame.player.job.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
                 }
                 else
