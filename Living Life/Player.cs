@@ -14,7 +14,7 @@ namespace Living_Life
         public int income;
         public int savings;
         public int educationLevel;
-        public int schoolMonths;
+        public int schoolMonths =0;
         public Property car;
         public Property house;
         public Job job;

@@ -17,9 +17,7 @@ namespace Living_Life
         public OptionsMenu()
         {
             InitializeComponent();
-            if(player.schoolMonths>0){
-                btnGoToCollege.Text = "Drop Out Of College";
-            }
+            this.player = mainScreen.mainGame.player;
         }
 
         public OptionsMenu(MainScreen mainScreen, Player player)

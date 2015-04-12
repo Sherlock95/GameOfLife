@@ -109,9 +109,10 @@ namespace Living_Life
             }
 
             gameCalled = true;
-            mainScreen.Enabled = true;
+
             mainScreen.mainGame.player = player;
             mainScreen.UpdateFields();
+            mainScreen.Enabled = true;
             this.Close();
 
         }
