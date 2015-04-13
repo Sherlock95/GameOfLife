@@ -32,7 +32,7 @@ namespace Living_Life
             schoolMonths = 0;
             car = null;
             house = null;
-            job = null;
+            job = new Job("None", 0, 0);
             tithe = false;
         }
 

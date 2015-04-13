@@ -80,15 +80,17 @@ namespace Living_Life
                     //someone keeps changing this to parentOptions.mainScreen.mainGame.player.income
                     //it needs to stop
                     //it needs to be player.job.salary
-                    //income is not used here
-<<<<<<< HEAD
-                    //either someone keeps changing it or git keeps messing it up
-                    parentOptions.mainScreen.mainGame.player.job.salary = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
-=======
+                    //income should not be used here
+                    
                     //YOU ARE WRONG. I HAVE WRITTEN THE WHOLE PROGRAM TO USE INCOME FOR THIS BECUASE THE JOB.SALARY HAS POINTER ISSUES USING
                     //INCOME IS EFFECTIVE AND WAS WORKING PERFECTLY WELL DO NOT CHANGE AGAIN. -MARCUS
+
+                    //fine.
+                    //but whenever it is using income, it has issues for me. 
+                    //using income causes issues whenever you switch jobs while you are going to college.  
+                    //I figured out how to work around the pointer issues - Judah
                     parentOptions.mainScreen.mainGame.player.income = parentOptions.mainScreen.mainGame.jobs[lstJobs.SelectedIndex].salary / 2;
->>>>>>> 294116fb95db8a360b6762083106912c9e19c8be
+
                 }
                 else
                 {

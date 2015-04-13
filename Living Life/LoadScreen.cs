@@ -66,6 +66,8 @@ namespace Living_Life
             if (errLabel.Visible)
                 errLabel.Visible = false;
 
+            
+
             //save new name
             for (int i = 0; i < lstFiles.Items.Count; i++)
             {
