@@ -103,13 +103,13 @@ namespace Living_Life
                 lblCar.Text = "Car: " + mainGame.player.car.name;
                 if (mainGame.player.car.duration > 0)
                 {
-                    lblCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment + " For: " + mainGame.player.car.duration + " months";
+                    lblCarBills.Text = "Car Bills:  " + (mainGame.player.car.monthlyPayment +mainGame.player.car.insurance)+ " For: " + mainGame.player.car.duration + " months";
                     lblCurrentCarBills.Text = "Car Bills:  " + mainGame.player.car.monthlyPayment + " For: " + mainGame.player.car.duration + " months";
                 }
                 else
                 {
-                    lblCarBills.Text = "Car Bills: 0";
-                    lblCurrentCarBills.Text = "Car Bills: 0";
+                    lblCarBills.Text = "Car Bills: "+mainGame.player.car.insurance;
+                    lblCurrentCarBills.Text = "Car Bills: " + mainGame.player.car.insurance;
                 }
                 picCar.Image = Image.FromFile(mainGame.player.car.name + ".jpg");
                 // What is the difference between car bills and monthly car bills????
@@ -129,12 +129,12 @@ namespace Living_Life
                 lblHouse.Text = "House:  " + mainGame.player.house.name;
                 if (mainGame.player.house.duration > 0)
                 {
-                    lblHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment + " For: " + mainGame.player.house.duration + " months";
+                    lblHouseBills.Text = "House Bills:  " + (mainGame.player.house.monthlyPayment + mainGame.player.house.insurance) + " For: " + mainGame.player.house.duration + " months";
                     lblCurrentHouseBills.Text = "House Bills:  " + mainGame.player.house.monthlyPayment + " For: " + mainGame.player.house.duration + " months";
                 }
                 else {
-                    lblHouseBills.Text = "House Bills: 0";
-                    lblCurrentHouseBills.Text = "House Bills: 0";
+                    lblHouseBills.Text = "House Bills: " + mainGame.player.house.insurance;
+                    lblCurrentHouseBills.Text = "House Bills: " + mainGame.player.house.insurance;
                 }
                picHouse.Image = Image.FromFile(mainGame.player.house.name + ".jpg");
                
@@ -174,7 +174,7 @@ namespace Living_Life
 
                 MessageBox.Show("You ran out of money");
                 MessageBox.Show("You Lose");
-                options.Close();
+                if(options!=null)options.Close();
                 this.Enabled = false;
                 LoadScreen loadGame = new LoadScreen(this);
 

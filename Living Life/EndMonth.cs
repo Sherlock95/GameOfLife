@@ -15,7 +15,6 @@ namespace Living_Life
         public Player player;
 
         private Random generator;
-        private bool continueCalled;
         private bool eventHappens;
 
         struct Event 
@@ -27,14 +26,12 @@ namespace Living_Life
         public EndMonth()
         {
             InitializeComponent();
-            continueCalled = false;
         }
 
         public EndMonth(MainScreen mainScreen)
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
-            continueCalled = false;
             eventHappens = false;
             UpdateFields();
         }
@@ -45,7 +42,6 @@ namespace Living_Life
             this.mainScreen = mainScreen;
             this.generator = generator;
             this.player = mainScreen.mainGame.player;
-            continueCalled = false;
             eventHappens = false;
             UpdateFields();
         }
@@ -124,12 +120,14 @@ namespace Living_Life
             {
                 expenses -= player.house.monthlyPayment;
                 player.house.duration--;
+                if (player.house.duration == 0) MessageBox.Show("You have payed off your house!!","Congradulations!!!!");
             }
 
             if (!(player.car == null || player.car.duration == 0))
             {
                 expenses -= player.car.monthlyPayment;
                 player.car.duration--;
+                if (player.car.duration == 0) MessageBox.Show("You have payed off your car!!", "Congradulations!!!!");
             }
 
             //player.income = ((player.job != null) ?  player.income- (player.income*10)/100 : 0);
@@ -147,6 +145,7 @@ namespace Living_Life
             {
                 mainScreen.monthsPassed = 0;
                 player.age++;
+                
             }
 
             if (player.schoolMonths != 0)
@@ -168,7 +167,7 @@ namespace Living_Life
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            continueCalled = true;
+            mainScreen.UpdateFields();
             this.Close();
         }
 
@@ -181,9 +180,6 @@ namespace Living_Life
                 mainScreen.Close();
                 return;
             }
-
-            if (continueCalled)
-                mainScreen.UpdateFields();
 
             mainScreen.Enabled = true;
         }

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Player xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <name>Judah</name>
-  <age>18</age>
+  <age>19</age>
   <wife>0</wife>
   <children>0</children>
   <income>1821</income>
-  <savings>51171</savings>
+  <savings>37798</savings>
   <educationLevel>0</educationLevel>
-  <schoolMonths>19</schoolMonths>
+  <schoolMonths>7</schoolMonths>
   <car>
-    <name>Bus</name>
-    <totalValue>0</totalValue>
-    <downPayment>0</downPayment>
-    <monthlyPayment>175</monthlyPayment>
-    <duration>0</duration>
-    <insurance>0</insurance>
+    <name>Motorcycle</name>
+    <totalValue>7000</totalValue>
+    <downPayment>1400</downPayment>
+    <monthlyPayment>120</monthlyPayment>
+    <duration>36</duration>
+    <insurance>70</insurance>
   </car>
   <house>
-    <name>Box</name>
+    <name>Studio Apt.</name>
     <totalValue>0</totalValue>
-    <downPayment>0</downPayment>
-    <monthlyPayment>0</monthlyPayment>
+    <downPayment>500</downPayment>
+    <monthlyPayment>500</monthlyPayment>
     <duration>0</duration>
     <insurance>0</insurance>
   </house>
