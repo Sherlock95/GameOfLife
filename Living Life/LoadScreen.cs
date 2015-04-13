@@ -71,7 +71,7 @@ namespace Living_Life
             //save new name
             for (int i = 0; i < lstFiles.Items.Count; i++)
             {
-                if (player.name == lstFiles.Items[i].ToString()) 
+                if (txtNewName.Text.Equals(lstFiles.Items[i].ToString())) 
                 {
                     playerExists = true;
                 }
@@ -92,31 +92,35 @@ namespace Living_Life
                     Console.WriteLine("There was a problem writing to the master saves file:");
                     Console.WriteLine(exception.Message);
                 }
-            }
 
-            XmlSerializer writer = new XmlSerializer(typeof(Player));
 
-            try
-            {
-                using (StreamWriter sw = new StreamWriter(player.name + ".xml"))
+                XmlSerializer writer = new XmlSerializer(typeof(Player));
+
+                try
                 {
-                    writer.Serialize(sw, player);
-                    sw.Close();
+                    using (StreamWriter sw = new StreamWriter(player.name + ".xml"))
+                    {
+                        writer.Serialize(sw, player);
+                        sw.Close();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("There was a problem creating the player save file.");
+                    Console.WriteLine(ex.Message);
+                }
+
+                gameCalled = true;
+
+                mainScreen.mainGame.player = player;
+                mainScreen.UpdateFields();
+                mainScreen.Enabled = true;
+                this.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("There was a problem creating the player save file.");
-                Console.WriteLine(ex.Message);
+            else { 
+                MessageBox.Show(this, "You have selected a name that already exists.", "Invalid User");
+                txtNewName.Clear();
             }
-
-            gameCalled = true;
-
-            mainScreen.mainGame.player = player;
-            mainScreen.UpdateFields();
-            mainScreen.Enabled = true;
-            this.Close();
-
         }
 
         private void txtNewName_TextChanged(object sender, EventArgs e)

@@ -76,14 +76,16 @@ namespace Living_Life
 
         // Need a way of telling if an option was chosen.
         private void btnContinue_Click(object sender, EventArgs e)
-        {
-            mainScreen.Enabled = true;
+        {   
             if (chkChurch.Checked)
             {
                 player.tithe = true;
             }
             else
                 player.tithe = false;
+            mainScreen.UpdateFields();
+            mainScreen.Enabled = true;
+            
             this.Close();
         }
 
@@ -92,11 +94,7 @@ namespace Living_Life
             if (player.schoolMonths <= 0)
             {
                 player.schoolMonths = 20;
-                Job newJob = new Job();
-                newJob.level = player.job.level;
-                newJob.name = player.job.name;
-                newJob.salary = player.job.salary / 2;
-                player.job = newJob;  //some things were complicated and it just works this way.
+                player.income /= 2;
                 btnGoToCollege.Text = "Drop Out";
                 mainScreen.UpdateFields();
                 return;
@@ -104,11 +102,7 @@ namespace Living_Life
             else
             {
                 player.schoolMonths = 0;
-                Job newJob = new Job();
-                newJob.level = player.job.level;
-                newJob.name = player.job.name;
-                newJob.salary = player.job.salary * 2;
-                player.job = newJob;  //some things were complicated and it just works this way.  
+                player.income *= 2;
                 btnGoToCollege.Text = "Go To College";
                 mainScreen.UpdateFields();
                 return;
@@ -126,7 +120,7 @@ namespace Living_Life
                 btnGoToCollege.Text = "Drop Out";
             }
             if (player.tithe)
-                chkChurch.Select();
+                chkChurch.Checked=true;
         }
     }
 }

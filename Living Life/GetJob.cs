@@ -80,8 +80,13 @@ namespace Living_Life
                     //someone keeps changing this to parentOptions.mainScreen.mainGame.player.income
                     //it needs to stop
                     //it needs to be player.job.salary
+<<<<<<< HEAD
                     //income should not be used here
                     
+=======
+                    //income is not used here
+
+>>>>>>> 80c034217c61d4706af2fc622326b2fd972f66c3
                     //YOU ARE WRONG. I HAVE WRITTEN THE WHOLE PROGRAM TO USE INCOME FOR THIS BECUASE THE JOB.SALARY HAS POINTER ISSUES USING
                     //INCOME IS EFFECTIVE AND WAS WORKING PERFECTLY WELL DO NOT CHANGE AGAIN. -MARCUS
 
